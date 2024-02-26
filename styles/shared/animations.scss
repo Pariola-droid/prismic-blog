@@ -1,0 +1,256 @@
+@keyframes hero-arrow {
+  0% {
+    transform: rotate(25deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(25deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(25deg);
+  }
+}
+
+@keyframes footer-star {
+  0% {
+    transform: rotate(360deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes twisted-down {
+  0% {
+    transform: rotate(20deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes desktop-twisted-down {
+  0% {
+    transform: rotate(20deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes twisted-up {
+  0% {
+    transform: rotate(-20deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-20deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(-20px);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  75% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes down-up {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotate-up {
+  0% {
+    transform: rotate(-20deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-20deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes rotate-down {
+  0% {
+    transform: rotate(20deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes scale-out {
+  0% {
+    transform: scale(1.1);
+  }
+  20% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    transform: scale(0.9);
+  }
+  20% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  75% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+//
+[data-animation='hero-arrow'] {
+  animation: hero-arrow 4s steps(1) infinite;
+  animation-direction: alternate;
+}
+
+[data-animation='footer-star'] {
+  animation: footer-star 15s steps(10) infinite;
+  animation-direction: alternate;
+}
+
+[data-animation='twisted-down'] {
+  animation: twisted-down 3s steps(1) infinite;
+  animation-direction: alternate;
+}
+
+[data-animation='desktop-twisted-down'] {
+  animation: desktop-twisted-down 3s steps(1) infinite;
+  animation-direction: alternate;
+
+  @include media('<=tablet') {
+    animation: none;
+  }
+}
+
+[data-animation='twisted-up'] {
+  animation: twisted-up 3s steps(1) infinite;
+  animation-direction: alternate;
+}
+
+[data-animation='up-down'] {
+  animation: up-down 3s steps(5) infinite;
+  animation-direction: alternate;
+}
+
+[data-animation='down-up'] {
+  animation: down-up 3s steps(5) infinite;
+  animation-direction: alternate;
+}
+
+[data-animation='scale-out'] {
+  animation: scale-out 3s steps(5) infinite;
+  animation-direction: alternate;
+}
+
+[data-animation='scale-in'] {
+  animation: scale-in 3s steps(5) infinite;
+  animation-direction: alternate;
+}
+
+[data-animation='rotate-up'] {
+  animation: rotate-up 3s steps(1) infinite;
+  animation-direction: alternate;
+}
+
+[data-animation='rotate-down'] {
+  animation: rotate-down 3s steps(1) infinite;
+  animation-direction: alternate;
+}

@@ -1,0 +1,159 @@
+@import '../../../styles/core/variables.scss';
+@import '../../../styles/core/typography.scss';
+@import '../../../styles/utils/mixins.scss';
+@import '../../../styles/utils/breakpoints.scss';
+
+.whyQilo {
+  width: 100%;
+  height: auto;
+  padding: 5.625rem 0;
+  @include grid();
+  overflow: hidden;
+  background-color: $lightBrown;
+
+  @include media('<=tablet') {
+    padding: 5rem 0 5rem;
+    margin-bottom: 3rem;
+  }
+
+  & .wrap {
+    @include flexed(unset, center, column);
+    width: 100%;
+    max-width: $layout-breakpoint-medium;
+    row-gap: 3.75rem;
+    position: relative;
+
+    @include media('<=tablet') {
+      max-width: 100%;
+      row-gap: 3rem;
+    }
+
+    & .decor {
+      top: calc(-5.6rem - 7.5rem);
+      right: calc(-5.6rem - 3.3rem);
+      position: absolute;
+
+      @include media('<=tablet') {
+        display: none;
+      }
+    }
+
+    & .heading {
+      width: 100%;
+      @include grid();
+
+      & h2 {
+        color: $darkGreen;
+        font-family: var(--font-made-mirage);
+        font-size: 3.75rem;
+        font-weight: 900;
+        line-height: 130%;
+        position: relative;
+
+        @include media('<=tablet') {
+          font-size: 2.5rem;
+        }
+
+        & svg {
+          position: absolute;
+          top: -1.5rem;
+        }
+      }
+    }
+
+    & .grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 3.75rem;
+      row-gap: 2.25rem;
+
+      @include media('<=tablet') {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 2rem;
+      }
+
+      & .col {
+        width: 100%;
+        padding-bottom: 0.75rem;
+        display: grid;
+        grid-template-columns: 7.5rem 1fr;
+        column-gap: 2.25rem;
+        position: relative;
+        border-bottom: 1px solid rgba(4, 61, 59, 0.2);
+
+        @include media('<=tablet') {
+          grid-template-columns: 1fr;
+          column-gap: 0;
+          row-gap: 2rem;
+          padding-bottom: 1rem;
+        }
+
+        @include media('<=tablet') {
+          border-bottom: none;
+
+          &:not(:last-of-type) {
+            border-bottom: 1px solid rgba(4, 61, 59, 0.2);
+          }
+        }
+
+        & .icon {
+          width: 7.5rem;
+          height: 7.5rem;
+          background-color: $white;
+          border-radius: 100%;
+          @include grid();
+
+          @include media('<=tablet') {
+            width: 5rem;
+            height: 5rem;
+
+            & img {
+              max-height: 50%;
+              max-width: 50%;
+            }
+          }
+        }
+
+        & .texts {
+          width: 100%;
+          @include flexed(center, flex-start, column);
+
+          & h5 {
+            color: $darkGrey;
+            font-family: var(--font-made-mirage);
+            font-size: 1.87rem;
+            font-weight: 700;
+            line-height: 150%;
+
+            @include media('<=tablet') {
+              font-size: 1.5rem;
+            }
+          }
+
+          & p {
+            color: $darkGrey;
+            font-family: var(--font-gilroy);
+            font-size: 0.844rem;
+            font-weight: 500;
+            line-height: 150%;
+
+            @include media('<=tablet') {
+              font-size: 0.88rem;
+              max-width: 95%;
+            }
+          }
+        }
+      }
+    }
+
+    & .mdBtn {
+      display: none;
+      width: 100%;
+
+      @include media('<=tablet') {
+        @include flexed(flex-start, center, row);
+      }
+    }
+  }
+}

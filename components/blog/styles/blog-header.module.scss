@@ -1,0 +1,197 @@
+@import '../../../styles/core/variables.scss';
+@import '../../../styles/core/typography.scss';
+@import '../../../styles/utils/mixins.scss';
+@import '../../../styles/utils/breakpoints.scss';
+
+.blogHeader {
+  padding: 6.5rem 0 0;
+  @include grid();
+  width: 100%;
+  background-color: $lightGrass;
+  overflow: hidden;
+
+  @include media('<=tablet') {
+    padding: 5rem 0 5rem;
+  }
+
+  & .wrap {
+    width: 100%;
+    padding-top: 5rem;
+    max-width: 78.75rem;
+    position: relative;
+    @include grid();
+
+    @include media('<=tablet') {
+      max-width: 100%;
+      padding-top: 2.5rem;
+    }
+
+    & .bigImage {
+      height: 45rem;
+      width: 100%;
+      margin-bottom: 15rem;
+      border-radius: 3rem;
+      overflow: hidden;
+
+      @include media('<=tablet') {
+        height: 20rem;
+        position: absolute;
+        top: 2.5rem;
+        border-radius: 1.5rem;
+      }
+
+      &:hover {
+        & img {
+          transform: scale(1.05);
+        }
+      }
+
+      & a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+      }
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+
+    & .floatingContent {
+      width: 100%;
+      max-width: 71.25rem;
+      height: 37.5rem;
+      background-color: $white;
+      position: absolute;
+      top: 20.8rem;
+      border-radius: 3rem;
+      padding: 3.75rem;
+      @include flexed(unset, flex-start, column);
+      row-gap: 1.88rem;
+
+      @include media('<=tablet') {
+        position: unset;
+        margin-top: 10rem;
+        max-width: 90%;
+        height: auto;
+        z-index: 1;
+        padding: 1.5rem 2rem;
+        border-radius: 1.5rem;
+        row-gap: 1.5rem;
+      }
+
+      & .topProps {
+        width: 100%;
+        color: $lightGreen;
+        font-family: var(--font-gilroy);
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 0.24rem;
+        text-transform: uppercase;
+
+        @include media('<=tablet') {
+          font-size: 1.125rem;
+        }
+
+        @include media('<=phone') {
+          font-size: 1rem;
+        }
+      }
+
+      & .title {
+        color: $darkGreen;
+        font-family: var(--font-made-mirage);
+        font-size: 3rem;
+        font-weight: 900;
+        line-height: 130%;
+
+        @include media('<=tablet') {
+          font-size: 2.5rem;
+        }
+
+        @include media('<=phone') {
+          font-size: 2rem;
+        }
+      }
+
+      & .excerpt {
+        width: 100%;
+        overflow: hidden;
+        color: $darkGreen;
+        font-family: var(--font-gilroy);
+        font-size: 1.3125rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+
+        @include media('<=tablet') {
+          font-size: 1rem;
+          -webkit-line-clamp: 8;
+        }
+      }
+
+      & .bottomProps {
+        width: 100%;
+        @include flexed(space-between, center, row);
+
+        @include media('<=tablet') {
+          @include flexed(unset, flex-start, column);
+          row-gap: 1rem;
+        }
+
+        & .category {
+          padding: 0 1.69rem;
+          font-family: var(--font-gilroy);
+          font-size: 1.125rem;
+          font-weight: 600;
+          line-height: 160%;
+          border-radius: 11.25rem;
+          padding-top: 3px;
+          height: 2.9rem;
+          @include grid();
+
+          @include media('<=tablet') {
+            font-size: 1rem;
+            height: 2.5rem;
+            padding-top: 0;
+            padding: 0 1.25rem;
+          }
+
+          &.weightLoss {
+            background: #d3f3ff;
+            color: $darkBlue;
+          }
+        }
+
+        & .readLink {
+          @include flexed(flex-start, center, row);
+          column-gap: 0.5rem;
+          color: $darkGreen;
+          font-family: var(--font-made-mirage);
+          font-size: 1.88rem;
+          font-weight: 700;
+          line-height: normal;
+          text-decoration-line: underline;
+
+          @include media('<=tablet') {
+            font-size: 1.25rem;
+
+            & svg {
+              width: 1.25rem;
+              height: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

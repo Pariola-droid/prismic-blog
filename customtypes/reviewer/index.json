@@ -1,0 +1,33 @@
+{
+  "format": "custom",
+  "id": "reviewer",
+  "label": "Reviewer",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "Slug",
+          "placeholder": ""
+        },
+        "type": "UID"
+      },
+      "avatar": {
+        "type": "Image",
+        "config": {
+          "label": "avatar",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "fullname": {
+        "type": "Text",
+        "config": {
+          "label": "Fullname",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

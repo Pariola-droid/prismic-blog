@@ -1,0 +1,249 @@
+@import '../../../styles/core/variables.scss';
+@import '../../../styles/core/typography.scss';
+@import '../../../styles/utils/mixins.scss';
+@import '../../../styles/utils/breakpoints.scss';
+
+.creating {
+  width: 100%;
+  @include grid();
+  padding: 5.62rem 0;
+  position: relative;
+  overflow: hidden;
+
+  @include media('<=tablet') {
+    padding: 5rem 0 5rem;
+  }
+
+  & .wrap {
+    width: 100%;
+    max-width: $layout-breakpoint-medium;
+    row-gap: 3.75rem;
+    @include flexed(unset, center, column);
+
+    @include media('<=tablet') {
+      max-width: 100%;
+      row-gap: 3rem;
+    }
+
+    & .heading {
+      width: 100%;
+      max-width: 55.2rem;
+      @include flexed(unset, center, column);
+      row-gap: 1.5rem;
+
+      @include media('<=tablet') {
+        row-gap: 1.25rem;
+      }
+
+      & h2 {
+        color: $darkGreen;
+        font-family: var(--font-made-mirage);
+        font-size: 3.75rem;
+        font-weight: 900;
+        line-height: 130%;
+
+        @include media('<=tablet') {
+          font-size: 2.5rem;
+          text-align: center;
+        }
+
+        & span {
+          position: relative;
+          color: $lightGreen;
+
+          & svg {
+            position: absolute;
+            width: 120%;
+            left: -10%;
+          }
+        }
+      }
+
+      & p {
+        max-width: 49.4rem;
+        color: $darkGreen;
+        text-align: center;
+        font-family: var(--font-gilroy);
+        font-size: 1.3rem;
+        font-weight: 500;
+        line-height: 150%;
+
+        @include media('<=tablet') {
+          font-size: 1.125rem;
+        }
+      }
+    }
+
+    & .grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 1.88rem;
+
+      @include media('<=tablet') {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 1.5rem;
+      }
+
+      & .col {
+        width: 100%;
+        max-height: 30rem;
+        border-radius: 1.88rem;
+        padding: 1.88rem;
+        @include flexed(space-between, center, column);
+
+        @include media('<=tablet') {
+          max-height: 55rem;
+          padding: 1.5rem;
+        }
+
+        &:nth-child(1) {
+          background-color: #d3f3ff;
+        }
+
+        &:nth-child(2) {
+          background-color: #ffecdb;
+        }
+
+        & .top {
+          @include flexed(unset, flex-start, column);
+          row-gap: 1.12rem;
+
+          @include media('<=tablet') {
+            row-gap: 1.5rem;
+          }
+
+          & .head {
+            @include flexed(unset, flex-start, column);
+            width: 100%;
+            gap: 0.56rem;
+
+            @include media('<=tablet') {
+              gap: 0.75rem;
+            }
+
+            & h3 {
+              color: $darkGreen;
+              font-family: var(--font-gilroy);
+              font-size: 1.5rem;
+              font-weight: 700;
+              line-height: normal;
+              letter-spacing: 0.09rem;
+              text-transform: uppercase;
+            }
+
+            & p {
+              color: $darkGreen;
+              font-family: var(--font-gilroy);
+              font-size: 0.9375rem;
+              font-weight: 500;
+              line-height: 120%;
+              letter-spacing: 0.01875rem;
+
+              @include media('<=tablet') {
+                font-size: 0.88rem;
+                max-width: 70%;
+              }
+            }
+          }
+
+          & .price {
+            color: $darkGreen;
+            font-family: var(--font-gilroy);
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 120%;
+
+            @include media('<=tablet') {
+              font-size: 2.5rem;
+            }
+
+            & span {
+              font-size: 1.125rem;
+              font-weight: 600;
+
+              @include media('<=tablet') {
+                display: none;
+              }
+            }
+          }
+
+          & .feats {
+            width: 100%;
+            @include flexed(flex-start, flex-start, row);
+            flex-wrap: wrap;
+            gap: 0.75rem;
+
+            @include media('<=tablet') {
+              gap: 1rem;
+            }
+
+            @include media('<=phone') {
+              flex-direction: column;
+            }
+
+            & .ft {
+              @include flexed(flex-start, center, row);
+              column-gap: 0.4rem;
+              width: max-content;
+
+              & span {
+                color: $darkGreen;
+                font-family: var(--font-gilroy);
+                font-size: 1.03rem;
+                font-weight: 600;
+                line-height: 120%;
+                letter-spacing: 0.021rem;
+                text-transform: capitalize;
+
+                @include media('<=tablet') {
+                  font-size: 1rem;
+                }
+              }
+            }
+          }
+        }
+
+        & .bottom {
+          width: 100%;
+          margin-top: 1.88rem;
+
+          @include media('<=tablet') {
+            margin-top: 2.5rem;
+          }
+
+          & button {
+            width: 100%;
+            height: 4.12rem;
+            background-color: $white;
+            border-radius: 1.88rem;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+              opacity: 0.75;
+              transform: scale(0.98);
+            }
+
+            @include media('<=tablet') {
+              height: 3.2rem;
+            }
+
+            & a {
+              width: 100%;
+              height: 100%;
+              color: $darkGreen;
+              font-family: var(--font-gilroy);
+              font-size: 0.94rem;
+              @include grid();
+              font-weight: 700;
+
+              @include media('<=tablet') {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

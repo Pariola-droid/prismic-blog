@@ -1,0 +1,145 @@
+@import '../../../styles/core/variables.scss';
+@import '../../../styles/core/typography.scss';
+@import '../../../styles/utils/mixins.scss';
+@import '../../../styles/utils/breakpoints.scss';
+
+.notQilo {
+  width: 100%;
+  @include grid();
+  background-color: $lightPurple;
+  overflow: hidden;
+  padding: 5.6rem 0;
+
+  @include media('<=tablet') {
+    padding: 5rem 0;
+  }
+
+  & .wrap {
+    width: 100%;
+    max-width: $layout-breakpoint-medium;
+    position: relative;
+    @include flexed(unset, center, column);
+    row-gap: 3.75rem;
+
+    @include media('<=tablet') {
+      max-width: 100%;
+      row-gap: 2rem;
+    }
+
+    & .illy_spiral {
+      position: absolute;
+      top: 5.6rem;
+      left: calc(-5.6rem - 5.6rem);
+
+      @include media('<=tablet') {
+        max-width: 12.5rem;
+        max-height: 12.5rem;
+        top: unset;
+        bottom: calc(-5.6rem - 5.6rem);
+        left: unset;
+      }
+    }
+
+    & h2 {
+      color: $darkGreen;
+      font-family: var(--font-made-mirage);
+      font-size: 3.7rem;
+      font-weight: 900;
+      line-height: 130%;
+
+      @include media('<=tablet') {
+        font-size: 2.5rem;
+      }
+
+      & span {
+        position: relative;
+
+        & svg {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+        }
+      }
+    }
+
+    & .grid {
+      width: 100%;
+      max-width: 65rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+
+      @include media('<=tablet') {
+        max-width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.88rem;
+      }
+
+      & .row {
+        @include flexed(center, center, column);
+        row-gap: 1.25rem;
+        width: 100%;
+        background-color: $white;
+        height: 20rem;
+        border-radius: 2rem;
+        padding: 2.5rem;
+
+        & .icon {
+          width: 7.5rem;
+          height: 7.5rem;
+          border-radius: 100%;
+          @include grid();
+
+          & img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+          }
+        }
+
+        & h5 {
+          color: $darkGrey;
+          font-family: var(--font-made-mirage);
+          font-size: 1.87rem;
+          font-weight: 700;
+          line-height: 150%;
+          text-align: center;
+
+          @include media('<=tablet') {
+            font-size: 1.5rem;
+          }
+        }
+
+        & h3 {
+          color: $darkGreen;
+          font-family: var(--font-made-mirage);
+          font-size: 1.87rem;
+          font-weight: 700;
+          line-height: 130%;
+          text-align: center;
+          margin-bottom: 1.25rem;
+
+          @include media('<=tablet') {
+            font-size: 1.5rem;
+          }
+        }
+
+        & p {
+          color: $darkGrey;
+          font-size: 1.25rem;
+          font-weight: 400;
+          line-height: 150%;
+          text-align: center;
+          max-width: 80%;
+          margin: 0 auto;
+
+          @include media('<=tablet') {
+            font-size: 0.95rem;
+            max-width: 90%;
+          }
+        }
+      }
+    }
+  }
+}

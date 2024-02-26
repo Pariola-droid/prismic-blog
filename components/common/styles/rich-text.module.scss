@@ -1,0 +1,181 @@
+@import '../../../styles/core/variables.scss';
+@import '../../../styles/core/typography.scss';
+@import '../../../styles/utils/mixins.scss';
+@import '../../../styles/utils/breakpoints.scss';
+
+.h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 130%;
+  margin-bottom: 1.88rem;
+  font-family: var(--font-made-mirage);
+  color: $darkGrey;
+  text-align: inherit;
+
+  @include media('<=tablet') {
+    font-size: 2.5rem;
+  }
+}
+
+.h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 130%;
+  margin-bottom: 1.88rem;
+  font-family: var(--font-made-mirage);
+  color: $darkGrey;
+  text-align: inherit;
+
+  @include media('<=tablet') {
+    font-size: 2rem;
+  }
+}
+
+.h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 130%;
+  margin-bottom: 1.88rem;
+  font-family: var(--font-made-mirage);
+  color: $darkGrey;
+  text-align: inherit;
+
+  @include media('<=tablet') {
+    font-size: 1.75rem;
+  }
+}
+
+.h4 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 130%;
+  margin-bottom: 1.88rem;
+  font-family: var(--font-made-mirage);
+  color: $darkGrey;
+  text-align: inherit;
+
+  @include media('<=tablet') {
+    font-size: 1.5rem;
+  }
+}
+
+.h5 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 130%;
+  margin-bottom: 1.88rem;
+  font-family: var(--font-made-mirage);
+  color: $darkGrey;
+  text-align: inherit;
+
+  @include media('<=tablet') {
+    font-size: 1.25rem;
+  }
+}
+
+.h6 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 130%;
+  margin-bottom: 1.88rem;
+  font-family: var(--font-made-mirage);
+  color: $darkGrey;
+  text-align: inherit;
+
+  @include media('<=tablet') {
+    font-size: 1rem;
+  }
+}
+
+.p {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 1.2rem;
+  font-family: var(--font-gilroy);
+  color: $darkGrey;
+  text-align: inherit;
+
+  @include media('<=tablet') {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.a {
+  color: $darkGreen;
+  text-decoration: underline;
+  font-weight: 700;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $lightGreen;
+  }
+}
+
+.ol {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 1.88rem;
+  font-family: var(--font-gilroy);
+  color: $darkGrey;
+  text-align: inherit;
+  list-style-type: decimal;
+  list-style-position: inside;
+  padding-left: 1.5rem;
+
+  & li {
+    margin-bottom: 0.625rem;
+  }
+
+  @include media('<=tablet') {
+    font-size: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+.ul {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 1.88rem;
+  font-family: var(--font-gilroy);
+  color: $darkGrey;
+  text-align: inherit;
+  list-style-type: disc;
+  list-style-position: inside;
+  padding-left: 1.5rem;
+
+  & li {
+    margin-bottom: 0.625rem;
+  }
+
+  @include media('<=tablet') {
+    font-size: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+.image {
+  margin-top: 3.75rem;
+  margin-bottom: 3.75rem;
+  width: 100%;
+  max-width: 100%;
+  max-height: 35rem;
+  display: block;
+  overflow: hidden;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  @include media('<=tablet') {
+    max-height: 20rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+}

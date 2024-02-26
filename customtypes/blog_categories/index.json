@@ -1,0 +1,39 @@
+{
+  "format": "custom",
+  "id": "blog_categories",
+  "label": "Blog Category",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "Slug",
+          "placeholder": ""
+        },
+        "type": "UID"
+      },
+      "name": {
+        "type": "Text",
+        "config": {
+          "label": "Name",
+          "placeholder": ""
+        }
+      },
+      "description": {
+        "type": "Text",
+        "config": {
+          "label": "Description",
+          "placeholder": ""
+        }
+      },
+      "color": {
+        "type": "Color",
+        "config": {
+          "label": "Color",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

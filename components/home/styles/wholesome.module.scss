@@ -1,0 +1,150 @@
+@import '../../../styles/core/variables.scss';
+@import '../../../styles/core/typography.scss';
+@import '../../../styles/utils/mixins.scss';
+@import '../../../styles/utils/breakpoints.scss';
+
+.wholesome {
+  width: 100%;
+  @include grid();
+  padding: 7.5rem 0 7.5rem;
+  position: relative;
+  overflow: hidden;
+  background-color: $blue;
+
+  @include media('<=tablet') {
+    padding: 5rem 0 0;
+  }
+
+  & .hearts {
+    position: absolute;
+    right: -12.5%;
+    top: -9.8rem;
+
+    @include media('<=tablet') {
+      right: unset;
+      top: unset;
+      left: -7rem;
+      bottom: 8rem;
+      width: 20rem;
+      height: 20rem;
+    }
+  }
+
+  & .wrap {
+    width: 100%;
+    max-width: $layout-breakpoint-medium;
+    @include flexed(flex-start, center, row);
+    position: relative;
+
+    @include media('<=tablet') {
+      max-width: 100%;
+      @include flexed(unset, flex-start, column);
+    }
+
+    & .textContent {
+      width: 100%;
+      max-width: 43rem;
+      @include flexed(unset, flex-start, column);
+      row-gap: 3rem;
+      position: relative;
+
+      @include media('<=tablet') {
+        row-gap: 2rem;
+      }
+
+      & h2 {
+        color: $darkGreen;
+        font-family: var(--font-made-mirage);
+        font-size: 3.75rem;
+        font-weight: 900;
+        line-height: 130%;
+        max-width: 90%;
+
+        @include media('<=tablet') {
+          font-size: 2.5rem;
+          max-width: 100%;
+        }
+
+        & span {
+          color: $lightGreen;
+          position: relative;
+
+          @include media('<=tablet') {
+            color: $darkGreen;
+          }
+
+          & svg {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+          }
+        }
+      }
+
+      & .twoCopies {
+        width: 100%;
+
+        & p {
+          color: $darkGreen;
+          font-family: var(--font-gilroy);
+          font-size: 0.94rem;
+          font-weight: 700;
+          line-height: 160%;
+          max-width: 37.5rem;
+
+          @include media('<=tablet') {
+            font-size: 1.125rem;
+            max-width: 100%;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    & .woman {
+      position: absolute;
+      right: -5.6rem;
+      bottom: calc(-7.5rem - 5rem);
+
+      @include media('<desktop') {
+        bottom: calc(-7.5rem - 12rem);
+      }
+
+      @include media('<=1250px') {
+        right: -10%;
+        bottom: calc(-7.5rem - 18rem);
+      }
+
+      @include media('<=tablet') {
+        position: relative;
+        width: 23.5rem;
+        height: 27.5rem;
+        bottom: 0rem;
+      }
+
+      &_us {
+        position: absolute;
+        right: -5.6rem;
+
+        @include media('<=tablet') {
+          position: relative;
+          width: 30rem;
+          height: 30rem;
+          margin-left: auto;
+          right: -6%;
+        }
+
+        @include media('<=phone') {
+          height: 25rem;
+          max-width: 100%;
+          bottom: 0rem;
+        }
+
+        @include media('<=375px') {
+          right: -13%;
+        }
+      }
+    }
+  }
+}

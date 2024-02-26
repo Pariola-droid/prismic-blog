@@ -1,0 +1,165 @@
+@import '../../../styles/core/variables.scss';
+@import '../../../styles/core/typography.scss';
+@import '../../../styles/utils/mixins.scss';
+@import '../../../styles/utils/breakpoints.scss';
+
+.header {
+  padding: 7.5rem 0 7.3rem;
+  height: auto;
+  max-height: 900px;
+  @include grid();
+  overflow: hidden;
+  position: relative;
+
+  @include media('<=tablet') {
+    padding: 5.5rem 0 5rem;
+    max-height: unset;
+  }
+
+  & .wrap {
+    width: 100%;
+    height: 100%;
+    max-width: $layout-breakpoint-medium;
+    @include flexed(space-between, center, row);
+    position: relative;
+    padding-top: 6.3rem;
+
+    @include media('<=tablet') {
+      max-width: 100%;
+      @include flexed(unset, flex-start, column);
+      row-gap: 6rem;
+    }
+
+    @include media('<=phone') {
+      padding-top: 5rem;
+    }
+
+    & .left {
+      @include flexed(unset, flex-start, column);
+      width: 100%;
+      max-width: 37.9rem;
+      padding-bottom: 5.6rem;
+
+      @include media('<=tablet') {
+        max-width: 100%;
+        padding: 0;
+      }
+
+      & h1 {
+        color: $darkGreen;
+        font-family: var(--font-made-mirage);
+        font-size: 3.7rem;
+        font-weight: 900;
+        line-height: 130%;
+        margin-bottom: 1.5rem;
+        max-width: 99%;
+
+        & span {
+          position: relative;
+
+          & svg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+          }
+        }
+
+        @include media('<=tablet') {
+          font-size: 3rem;
+          max-width: 100%;
+          margin-bottom: 1.25rem;
+        }
+      }
+
+      & p {
+        color: $darkGreen;
+        font-family: var(--font-gilroy);
+        font-size: 1.3rem;
+        font-weight: 500;
+        line-height: 150%;
+        max-width: 30rem;
+        margin-bottom: 1.5rem;
+
+        @include media('<=tablet') {
+          font-size: 1rem;
+          max-width: 100%;
+          margin-bottom: 2rem;
+        }
+      }
+
+      &Bottom {
+        position: relative;
+        width: 100%;
+
+        & .arrow {
+          position: absolute;
+          top: 0.5rem;
+          left: 37%;
+
+          @include media('<=tablet') {
+            max-width: 5rem;
+            max-height: 5rem;
+            left: 33%;
+            top: 0;
+          }
+
+          @include media('<=phone') {
+            left: 57%;
+          }
+        }
+      }
+    }
+
+    & .right {
+      width: 35rem;
+      height: 31.4rem;
+      border-radius: 2.5rem;
+      position: relative;
+      @include grid();
+
+      @include media('<=tablet') {
+        width: 100%;
+        height: 25rem;
+        border-radius: 1.5rem;
+      }
+
+      @include media('<=phone') {
+        width: 95%;
+        height: 20rem;
+      }
+
+      &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        color: $lightGreen;
+        position: absolute;
+        top: -1.5rem;
+        right: -1.5rem;
+        z-index: -1;
+        background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='40' ry='40' stroke='%2336B887FF' stroke-width='3' stroke-dasharray='12%2c 12%2c 12' stroke-dashoffset='7' stroke-linecap='square'/%3e%3c/svg%3e");
+        border-radius: 40px;
+
+        @include media('<=tablet') {
+          top: -1rem;
+          right: -1rem;
+          border-radius: 25px;
+          background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='25' ry='25' stroke='%2336B887FF' stroke-width='3' stroke-dasharray='12%2c 12%2c 12' stroke-dashoffset='7' stroke-linecap='square'/%3e%3c/svg%3e");
+        }
+      }
+
+      & .heroImage {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: inherit;
+
+        @include media('<=tablet') {
+          position: absolute;
+        }
+      }
+    }
+  }
+}

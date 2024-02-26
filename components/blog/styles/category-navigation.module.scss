@@ -1,0 +1,113 @@
+@import '../../../styles/core/variables.scss';
+@import '../../../styles/core/typography.scss';
+@import '../../../styles/utils/mixins.scss';
+@import '../../../styles/utils/breakpoints.scss';
+
+.category {
+  width: 100%;
+  min-height: 7.5rem;
+  padding: 1.5rem 0;
+  background-color: $white;
+  border: 0.38px solid #eee;
+  box-shadow: 0px 0.75px 4.5px 0px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+  @include grid();
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+
+  @include media('<=tablet') {
+    min-height: 5.5rem;
+    padding: 0.75rem 0;
+    border: 0.5px solid #eee;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.08);
+  }
+
+  & .wrap {
+    width: 100%;
+    max-width: $layout-breakpoint-medium;
+    @include flexed(flex-start, center, row);
+
+    @include media('<=tablet') {
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    & .list {
+      width: 100%;
+      @include flexed(space-between, center, row);
+
+      @include media('<=tablet') {
+        overflow-x: scroll;
+        column-gap: 0.2rem;
+
+        &::-webkit-scrollbar {
+          display: none;
+          width: 0;
+        }
+      }
+
+      & .link {
+        font-family: var(--font-gilroy);
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 160%;
+        letter-spacing: 0.045rem;
+        text-transform: uppercase;
+        color: $darkGreen;
+        border-radius: 3.3rem;
+        height: 2.9rem;
+        padding: 0 2.25rem;
+        @include grid();
+        padding-top: 3px;
+        //
+
+        @include media('<=tablet') {
+          font-size: 1rem;
+          height: 2.5rem;
+          padding: 0 1.125rem;
+          white-space: nowrap;
+        }
+
+        &.active {
+          background-color: $darkGreen;
+          color: $white !important;
+        }
+
+        & a {
+          color: currentColor;
+          z-index: 1;
+        }
+
+        &[data-category='science'] {
+          color: $darkBlue;
+        }
+
+        &[data-category='exercise'] {
+          color: $brown;
+        }
+
+        &[data-category='lifestyle'] {
+          color: $grass;
+        }
+
+        &[data-category='nutrition'] {
+          color: $mud;
+        }
+
+        &[data-category='news'] {
+          color: $purple;
+        }
+
+        &[data-category='recipes'] {
+          color: $darkBlue;
+        }
+
+        &[data-category='weight-loss'] {
+          color: $brown;
+        }
+      }
+    }
+  }
+}

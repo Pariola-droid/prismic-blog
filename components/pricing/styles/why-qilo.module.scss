@@ -1,0 +1,156 @@
+@import '../../../styles/core/variables.scss';
+@import '../../../styles/core/typography.scss';
+@import '../../../styles/utils/mixins.scss';
+@import '../../../styles/utils/breakpoints.scss';
+
+.whyQilo {
+  width: 100%;
+  height: auto;
+  padding: 5.62rem 0;
+  @include grid();
+  overflow: hidden;
+  background-color: $blue;
+
+  @include media('<=tablet') {
+    padding: 5rem 0;
+  }
+
+  & .wrap {
+    @include flexed(unset, center, column);
+    width: 100%;
+    max-width: $layout-breakpoint-medium;
+    row-gap: 5.6rem;
+    position: relative;
+
+    @include media('<=tablet') {
+      max-width: 100%;
+      row-gap: 3rem;
+      padding-bottom: 9rem;
+    }
+
+    & .decor {
+      bottom: calc(-5.6rem - 5.8rem);
+      right: calc(-5.6rem - 5.9rem);
+      position: absolute;
+
+      @include media('<=tablet') {
+        right: calc(-5% - 5rem);
+        max-width: 20.8rem;
+        max-height: 20.8rem;
+      }
+    }
+
+    & .heading {
+      width: 100%;
+      @include flexed(center, center, row);
+
+      & h2 {
+        color: $darkGreen;
+        font-family: var(--font-made-mirage);
+        font-size: 3.75rem;
+        font-weight: 900;
+        line-height: 130%;
+        text-align: center;
+
+        @include media('<=tablet') {
+          font-size: 2.5rem;
+          max-width: 90%;
+        }
+
+        & span {
+          position: relative;
+          z-index: 1;
+
+          & svg {
+            left: 0;
+            bottom: 0;
+            position: absolute;
+            z-index: -1;
+
+            @include media('<=tablet') {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    & .grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 3.75rem;
+      row-gap: 2.25rem;
+
+      @include media('<=tablet') {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+      }
+
+      & .col {
+        width: 100%;
+        padding-bottom: 0.75rem;
+        border-bottom: 0.75px solid rgba(4, 61, 59, 0.2);
+        display: grid;
+        grid-template-columns: 7.5rem 1fr;
+        column-gap: 2.25rem;
+        position: relative;
+
+        @include media('<=tablet') {
+          grid-template-columns: 1fr;
+          row-gap: 1rem;
+          padding-bottom: 1rem;
+
+          &:last-of-type {
+            padding-bottom: 0;
+            border-bottom: none;
+          }
+        }
+
+        & .icon {
+          width: 7.5rem;
+          height: 7.5rem;
+          background-color: $white;
+          border-radius: 100%;
+          @include grid();
+
+          & img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+
+          @include media('<=tablet') {
+            width: 5rem;
+            height: 5rem;
+          }
+        }
+
+        & .texts {
+          width: 100%;
+          @include flexed(center, flex-start, column);
+
+          & p {
+            color: $darkGrey;
+            font-family: var(--font-made-mirage);
+            font-size: 1.88rem;
+            font-weight: 700;
+            line-height: 150%;
+
+            @include media('<=tablet') {
+              font-size: 1.75rem;
+            }
+          }
+        }
+
+        &:nth-of-type(4) {
+          white-space: nowrap;
+
+          @include media('<=tablet') {
+            white-space: normal;
+          }
+        }
+      }
+    }
+  }
+}

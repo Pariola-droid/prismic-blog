@@ -1,0 +1,95 @@
+@import '../../../styles/core/variables.scss';
+@import '../../../styles/core/typography.scss';
+@import '../../../styles/utils/mixins.scss';
+@import '../../../styles/utils/breakpoints.scss';
+
+.reference {
+  width: 100%;
+  @include grid();
+  padding: 5.2rem 0 5.2rem;
+  overflow: hidden;
+
+  @include media('<=tablet') {
+    padding: 5rem 0 5rem;
+  }
+
+  & .wrap {
+    width: 100%;
+    max-width: $layout-breakpoint-medium;
+    position: relative;
+    @include flexed(unset, flex-start, column);
+    row-gap: 4rem;
+
+    @include media('<=tablet') {
+      max-width: 100%;
+      row-gap: 2rem;
+    }
+
+    & h2 {
+      color: $darkGreen;
+      font-family: var(--font-made-mirage);
+      font-size: 3.75rem;
+      font-weight: 900;
+      line-height: 130%;
+
+      @include media('<=tablet') {
+        font-size: 2rem;
+      }
+    }
+
+    & .sourceList {
+      width: 100%;
+      @include flexed(unset, flex-start, column);
+      row-gap: 2.5rem;
+
+      & li {
+        width: 100%;
+
+        & div {
+          @include flexed(unset, flex-start, column);
+          row-gap: 0.75rem;
+
+          @include media('<=tablet') {
+            row-gap: 0.5rem;
+          }
+
+          & h4 {
+            color: $darkGrey;
+            font-family: var(--font-gilroy);
+            font-size: 1.125rem;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: 0.18rem;
+            text-transform: uppercase;
+
+            @include media('<=tablet') {
+              font-size: 1rem;
+              letter-spacing: 0.16rem;
+            }
+          }
+
+          & p {
+            color: $darkGreen;
+            font-size: 0.93rem;
+            font-weight: 400;
+            line-height: 150%;
+            text-decoration-line: underline;
+
+            @include media('<=tablet') {
+              font-size: 0.875rem;
+            }
+          }
+        }
+
+        &:not(:last-of-type) {
+          padding-bottom: 1.5rem;
+          border-bottom: 1px solid $lightGreen;
+
+          @include media('<=tablet') {
+            padding-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

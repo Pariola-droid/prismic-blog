@@ -1,0 +1,27 @@
+@import '../utils/mixins.scss';
+
+.c-cursor {
+  @include media('<=1024px') {
+    display: none;
+  }
+}
+
+.blaze-pagination {
+  @include flexed(center, center, row);
+  column-gap: 0.5rem;
+
+  & button {
+    width: 0.5rem;
+    height: 0.5rem;
+    color: transparent;
+    border-radius: 1rem;
+    opacity: 0.2;
+    background: #36b887;
+    transition: all 0.2s ease-in-out;
+
+    &.active {
+      opacity: 1;
+      width: 4rem;
+    }
+  }
+}

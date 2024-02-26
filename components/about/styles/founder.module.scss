@@ -1,0 +1,177 @@
+@import '../../../styles/core/variables.scss';
+@import '../../../styles/core/typography.scss';
+@import '../../../styles/utils/mixins.scss';
+@import '../../../styles/utils/breakpoints.scss';
+
+.founder {
+  width: 100%;
+  padding: 5.62rem 0 5.62rem;
+  background-color: $darkGreen;
+  @include grid();
+  position: relative;
+  overflow: hidden;
+
+  @include media('<=tablet') {
+    padding: 5rem 0 5rem;
+  }
+
+  & .whiskers {
+    position: absolute;
+    left: -3.2rem;
+    bottom: -4.4rem;
+
+    @include media('<=tablet') {
+      width: 7.5rem;
+      height: 7.5rem;
+      left: -1.75rem;
+      bottom: -2.5rem;
+    }
+  }
+
+  & .wrap {
+    width: 100%;
+    max-width: $layout-breakpoint-medium;
+    position: relative;
+    @include flexed(unset, center, column);
+    row-gap: 5.6rem;
+
+    @include media('<=tablet') {
+      max-width: 100%;
+      row-gap: 3rem;
+    }
+
+    & h2 {
+      color: $white;
+      font-family: var(--font-made-mirage);
+      font-size: 3.75rem;
+      font-weight: 900;
+      line-height: 130%;
+      position: relative;
+
+      @include media('<=tablet') {
+        font-size: 2.5rem;
+        text-align: center;
+      }
+
+      & svg {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: -25%;
+      }
+    }
+
+    & .fromFounder {
+      width: 100%;
+      @include flexed(space-between, center, row);
+
+      @include media('<=tablet') {
+        @include flexed(unset, center, column-reverse);
+        row-gap: 2rem;
+      }
+
+      & .writeup {
+        width: 100%;
+        max-width: 45rem;
+        @include flexed(unset, flex-start, column);
+        padding: 3rem;
+        position: relative;
+        border-radius: 1.875rem;
+        background: $white;
+
+        @include media('<=tablet') {
+          max-width: 100%;
+          padding: 2.5rem 1.5rem;
+        }
+
+        & .arrow {
+          position: absolute;
+          top: 10rem;
+          left: -2.3rem;
+
+          @include media('<=tablet') {
+            top: unset;
+            left: unset;
+            transform: rotate(-90deg);
+            right: 5rem;
+            bottom: -1.5rem;
+          }
+        }
+
+        & h3 {
+          color: $darkGreen;
+          font-family: var(--font-made-mirage);
+          font-size: 2.25rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 3rem;
+          margin-bottom: 1.12rem;
+
+          @include media('<=tablet') {
+            font-size: 1.75rem;
+            line-height: normal;
+            margin-bottom: 1.5rem;
+          }
+
+          & span {
+            color: $lightGreen;
+          }
+        }
+
+        & p {
+          color: $darkGreen;
+          font-size: 1.125rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 160%;
+
+          @include media('<=tablet') {
+            font-size: 1rem;
+            line-height: 160%;
+          }
+        }
+
+        & .author {
+          width: 100%;
+          margin-top: 1.88rem;
+          gap: 1.125rem;
+          @include flexed(flex-start, center, row);
+
+          @include media('<=tablet') {
+            margin-top: 2.5rem;
+            gap: 1rem;
+          }
+
+          & small {
+            color: $darkGreen;
+            font-family: var(--font-gilrot);
+            font-size: 1.125rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: 0.0675rem;
+            text-transform: uppercase;
+
+            @include media('<=tablet') {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+      & .image {
+        @include media('<=tablet') {
+          max-width: 22.88rem;
+          max-height: 22.88rem;
+
+          & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+      }
+    }
+  }
+}

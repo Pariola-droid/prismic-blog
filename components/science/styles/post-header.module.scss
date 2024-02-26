@@ -1,0 +1,221 @@
+@import '../../../styles/core/variables.scss';
+@import '../../../styles/core/typography.scss';
+@import '../../../styles/utils/mixins.scss';
+@import '../../../styles/utils/breakpoints.scss';
+
+.postHeader {
+  width: 100%;
+  @include grid();
+  padding: 5.62rem 0;
+
+  @include media('<=tablet') {
+    padding: 5rem 0;
+  }
+
+  & .wrap {
+    width: 100%;
+    max-width: $layout-breakpoint-medium;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.75rem;
+
+    @include media('<=tablet') {
+      max-width: 100%;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    & .col {
+      width: 100%;
+      height: 56.3rem;
+      padding: 3.75rem 0 0;
+      border-radius: 1.875rem;
+      overflow: hidden;
+      position: relative;
+
+      @include media('<=tablet') {
+        max-height: 43rem;
+        padding: 2rem 0 0;
+      }
+
+      &:nth-child(1) {
+        background-color: $lightBrown;
+      }
+
+      &:nth-child(2) {
+        background-color: $secondaryLightBlue;
+      }
+
+      & .textWrap {
+        padding: 0 3.75rem;
+        row-gap: 1.5rem;
+        @include flexed(unset, flex-start, column);
+
+        @include media('<=tablet') {
+          padding: 0 2rem;
+        }
+
+        & h3 {
+          color: $darkGreen;
+          font-family: var(--font-made-mirage);
+          font-size: 3rem;
+          font-style: normal;
+          font-weight: 900;
+          line-height: 130%;
+
+          @include media('<=tablet') {
+            font-size: 2.5rem;
+          }
+        }
+
+        & p {
+          color: $darkGreen;
+          font-family: var(--font-gilroy);
+          font-size: 1.125rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 150%;
+
+          @include media('<=tablet') {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      & .imgWrap {
+        width: 100%;
+        height: 50rem;
+        position: relative;
+        bottom: 0;
+
+        & .img {
+          position: absolute;
+          z-index: 1;
+          width: 100%;
+          object-fit: contain;
+
+          @include media('<desktop') {
+            width: 100%;
+            height: 100%;
+          }
+
+          &_us {
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            object-fit: contain;
+
+            @include media('<desktop') {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+
+      &:nth-of-type(1) .imgWrap {
+        & .decor {
+          position: absolute;
+          top: 2rem;
+          left: 3.75rem;
+
+          @include media('<=tablet') {
+            max-width: 5rem;
+            max-height: 5rem;
+            top: 4rem;
+            left: 1.5rem;
+          }
+        }
+
+        & .img {
+          bottom: -15%;
+          right: -3.5rem;
+
+          @include media('<=desktop') {
+            right: -0.94rem;
+            bottom: -8%;
+          }
+
+          @include media('<desktop') {
+            right: -2.5rem;
+            bottom: -2%;
+          }
+
+          @include media('<=tablet') {
+            bottom: 6%;
+            right: -4.5rem;
+          }
+
+          @include media('<=phone') {
+            bottom: 15%;
+            right: -2rem;
+          }
+
+          @include media('<=375px') {
+            bottom: 6%;
+          }
+
+          &_us {
+            @include media('<desktop') {
+              bottom: 10%;
+            }
+
+            @include media('<=tablet') {
+              bottom: 20%;
+              max-height: 80%;
+            }
+
+            @include media('<=phone') {
+              bottom: 35%;
+            }
+
+            @include media('<=375px') {
+              bottom: 30%;
+            }
+          }
+        }
+      }
+
+      &:nth-of-type(2) .imgWrap {
+        & .decor {
+          position: absolute;
+          right: 2.95rem;
+          z-index: 1;
+
+          @include media('<=tablet') {
+            max-width: 4rem;
+            max-height: 4rem;
+            right: 2.2rem;
+            top: 1rem;
+          }
+        }
+
+        & .img {
+          right: 0rem;
+          bottom: 20%;
+
+          @include media('<=desktop') {
+            bottom: 23%;
+          }
+
+          @include media('<desktop') {
+            bottom: 10%;
+          }
+
+          @include media('<=tablet') {
+            bottom: 20%;
+            transform: scale(0.75);
+          }
+
+          @include media('<=phone') {
+            transform: scale(1);
+          }
+
+          @include media('<=375px') {
+            transform: scale(0.9);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,215 @@
+@import '../../../styles/core/variables.scss';
+@import '../../../styles/core/typography.scss';
+@import '../../../styles/utils/mixins.scss';
+@import '../../../styles/utils/breakpoints.scss';
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(-30%);
+  }
+  60% {
+    transform: translateX(-30%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@include media('<=tablet') {
+  @keyframes marquee {
+    0% {
+      transform: translateX(-10%);
+    }
+    40% {
+      transform: translateX(-45%);
+    }
+    60% {
+      transform: translateX(-45%);
+    }
+    100% {
+      transform: translateX(-10%);
+    }
+  }
+}
+
+.header {
+  width: 100%;
+  padding: 7rem 0 5.6rem;
+  height: auto;
+  background-color: $white;
+  @include flexed(unset, center, column);
+  overflow: hidden;
+  row-gap: 3.7rem;
+
+  @include media('<=tablet') {
+    padding: 5rem 0 2.5rem;
+    row-gap: 2rem;
+  }
+
+  & .wrap {
+    width: 100%;
+    @include flexed(unset, center, column);
+    max-width: $layout-breakpoint-medium;
+    position: relative;
+
+    @include media('<=tablet') {
+      max-width: 90%;
+    }
+
+    & .lw {
+      left: -5.5rem;
+      top: 6rem;
+      position: absolute;
+
+      @include media('<=tablet') {
+        display: none;
+      }
+    }
+
+    & .rw {
+      right: -5rem;
+      bottom: -1rem;
+      position: absolute;
+
+      @include media('<=tablet') {
+        display: none;
+      }
+    }
+
+    & .content {
+      margin-top: 7.5rem;
+      width: 100%;
+      max-width: 67rem;
+      @include flexed(unset, center, column);
+
+      @include media('<=tablet') {
+        margin-top: 5rem;
+      }
+
+      & h1 {
+        color: $darkGreen;
+        text-align: center;
+        font-family: var(--font-made-mirage);
+        font-size: 3.75rem;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 130%;
+
+        @include media('<=tablet') {
+          font-size: 3rem;
+          max-width: 90%;
+        }
+
+        & span {
+          position: relative;
+          color: $lightGreen;
+
+          & svg {
+            position: absolute;
+            width: 110%;
+            left: 0%;
+            bottom: 0;
+
+            @include media('<=tablet') {
+              bottom: -20%;
+            }
+          }
+        }
+      }
+
+      & p {
+        color: $darkGreen;
+        text-align: center;
+        font-family: var(--font-gilroy);
+        font-size: 1.3125rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        margin-top: 1.12rem;
+        opacity: 0.7;
+
+        @include media('<=tablet') {
+          font-size: 1rem;
+          max-width: 96%;
+          margin-top: 1.25rem;
+        }
+      }
+
+      & button {
+        margin-top: 2.25rem;
+
+        @include media('<=tablet') {
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+
+  & .slider {
+    width: 100%;
+    padding: 0 5.6rem;
+    @include grid();
+    overflow: hidden;
+    position: relative;
+
+    & .line {
+      position: absolute;
+    }
+
+    & .spree {
+      height: auto;
+      width: auto;
+      position: relative;
+      @include flexed(flex-start, flex-start, row);
+      column-gap: 4.5vw;
+      will-change: transform;
+      //
+      animation-name: marquee;
+      animation-duration: 25s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+
+      & .hanger {
+        width: 18.75rem;
+        height: 30rem;
+        background-color: white;
+        overflow: hidden;
+        border-radius: 9.375rem;
+        @include grid();
+
+        @include media('<=tablet') {
+          width: 12.5rem;
+          height: 20rem;
+        }
+
+        &:nth-child(even) {
+          margin-bottom: 7.5rem;
+
+          @include media('<=tablet') {
+            margin-bottom: unset;
+            margin-top: 3.75rem;
+          }
+        }
+
+        &:nth-child(odd) {
+          margin-top: 7.5rem;
+
+          @include media('<=tablet') {
+            margin-top: unset;
+            margin-bottom: 3.75rem;
+          }
+        }
+
+        & img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

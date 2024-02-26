@@ -1,0 +1,228 @@
+@import '../../../../styles/core/variables.scss';
+@import '../../../../styles/core/typography.scss';
+@import '../../../../styles/utils/mixins.scss';
+@import '../../../../styles/utils/breakpoints.scss';
+
+.subscription {
+  width: 100%;
+  padding: 5.6rem 0;
+  @include grid();
+
+  @include media('<=tablet') {
+    padding: 5rem 0;
+  }
+
+  & .wrap {
+    max-width: $layout-breakpoint-medium;
+    width: 100%;
+    height: 30rem;
+    background: $brown;
+    border-radius: 2.5rem;
+    position: relative;
+    @include flexed(center, center, column);
+    overflow: hidden;
+
+    @include media('<=tablet') {
+      max-width: 100%;
+      height: auto;
+      padding: 5rem 2rem;
+    }
+
+    & .leftWhisker {
+      position: absolute;
+      left: 0;
+      bottom: -2rem;
+      transform: rotate(-30.889deg);
+
+      @include media('<=tablet') {
+        max-width: 7.5rem;
+        max-height: 7.5rem;
+        bottom: 0rem;
+        left: -1.8rem;
+      }
+    }
+
+    & .rightWhisker {
+      position: absolute;
+      right: 0;
+      top: 1.63rem;
+
+      @include media('<=tablet') {
+        max-width: 7.5rem;
+        max-height: 7.5rem;
+        top: 1.2rem;
+        right: -1.8rem;
+      }
+    }
+
+    & h2 {
+      color: $white;
+      text-align: center;
+      font-family: var(--font-made-mirage);
+      font-size: 3.75rem;
+      font-weight: 900;
+      line-height: 130%;
+      margin-bottom: 1rem;
+
+      @include media('<=tablet') {
+        font-size: 3rem;
+        line-height: 120%;
+        max-width: 88%;
+      }
+    }
+
+    & p {
+      color: $white;
+      text-align: center;
+      font-family: var(--font-gilroy);
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+
+      @include media('<=tablet') {
+        font-size: 1rem;
+        max-width: 90%;
+      }
+
+      &[data-paragraph-type='text1'] {
+        max-width: 22rem;
+      }
+
+      &[data-paragraph-type='text2'] {
+        width: 34.2rem;
+      }
+    }
+
+    & .yellowBtn {
+      background-color: $yellow;
+      color: $darkGreen;
+      font-family: var(--font-gilroy);
+      margin-top: 1rem;
+      padding: 0 3.75rem;
+      padding-top: 3px;
+      height: 3.75rem;
+      font-size: 0.95rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 160%;
+      border-radius: 3.3rem;
+      @include grid();
+
+      @include media('<=tablet') {
+        margin-top: 2rem;
+        padding: 0 3.5rem;
+      }
+    }
+
+    & .subForm {
+      width: max-content;
+      @include flexed(unset, center, column);
+
+      @include media('<=phone') {
+        width: 100%;
+      }
+
+      & .input {
+        margin: 1.88rem 0;
+        width: 38rem;
+        height: 3.75rem;
+        border-radius: 3.75rem;
+        background: $white;
+        overflow: hidden;
+        position: relative;
+
+        @include media('<=phone') {
+          width: 100%;
+          height: auto;
+          border-radius: unset;
+          background-color: unset;
+          @include flexed(unset, center, column);
+          row-gap: 1rem;
+        }
+
+        & input {
+          width: 100%;
+          height: 100%;
+          border-radius: 3.75rem;
+          padding: 0 1.88rem;
+          outline: 0;
+          border: 0;
+          //
+          color: #353535;
+          font-family: var(--font-gilroy);
+          font-size: 1.125rem;
+          font-weight: 400;
+          line-height: normal;
+
+          @include media('<=phone') {
+            padding: 0 1.5rem;
+            font-size: 1rem;
+            background: $white;
+            height: 3.5rem;
+            border-radius: 2.5rem;
+          }
+
+          &::placeholder {
+            color: inherit;
+            font-family: inherit;
+            font-size: inherit;
+            line-height: normal;
+          }
+        }
+
+        & button {
+          position: absolute;
+          right: 0;
+          height: 100%;
+          padding: 1.125rem 3.75rem;
+          border-radius: 3.3em;
+          background-color: $yellow;
+          //
+          color: $darkGreen;
+          font-family: var(--font-gilroy);
+          font-size: 0.94rem;
+          font-weight: 700;
+          line-height: 160%;
+
+          @include media('<=phone') {
+            padding: 0 2.5rem;
+            padding-top: 3px;
+            height: 3.88rem;
+            @include grid();
+            position: unset;
+            width: 100%;
+          }
+        }
+      }
+
+      & .terms {
+        width: max-content;
+        column-gap: 0.75rem;
+        @include flexed(flex-start, center, row);
+
+        @include media('<=phone') {
+          width: 100%;
+        }
+
+        & input {
+          width: 1.125rem;
+          height: 1.125rem;
+        }
+
+        & label {
+          color: #f5ffff;
+          font-family: var(--font-gilroy);
+          font-size: 1.125rem;
+          font-weight: 500;
+          letter-spacing: 0.045rem;
+          text-transform: uppercase;
+
+          @include media('<=phone') {
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+}

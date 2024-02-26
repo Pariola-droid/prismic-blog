@@ -1,0 +1,263 @@
+@import '../../../styles/core/variables.scss';
+@import '../../../styles/core/typography.scss';
+@import '../../../styles/utils/mixins.scss';
+@import '../../../styles/utils/breakpoints.scss';
+
+$card-count: 4;
+$colors: (
+  1: $secondaryLightBlue,
+  2: $lightGrass,
+  3: $lightPurple,
+  4: $lightBrown,
+);
+
+// Big Scrn
+$hovered-value5-big: 45%;
+$hovered-value3-big: 25%;
+$hovered-value1-big: 10%;
+// Small Scrn
+$hovered-value5: 50%;
+$hovered-value3: 35%;
+$hovered-value1: 15%;
+
+.card1 {
+  @include media('>tablet') {
+    &:hover {
+      & ~ .card2 {
+        transform: translateX($hovered-value5);
+
+        @include media('>desktop') {
+          transform: translateX($hovered-value5-big);
+        }
+      }
+
+      & ~ .card3 {
+        transform: translateX($hovered-value3);
+
+        @include media('>desktop') {
+          transform: translateX($hovered-value3-big);
+        }
+      }
+
+      & ~ .card4 {
+        transform: translateX($hovered-value1);
+
+        @include media('>desktop') {
+          transform: translateX($hovered-value1-big);
+        }
+      }
+    }
+  }
+}
+
+.card2 {
+  @include media('>tablet') {
+    &:hover {
+      & ~ .card3 {
+        transform: translateX($hovered-value5);
+
+        @include media('>desktop') {
+          transform: translateX($hovered-value5-big);
+        }
+      }
+
+      & ~ .card4 {
+        transform: translateX($hovered-value3);
+
+        @include media('>desktop') {
+          transform: translateX($hovered-value3-big);
+        }
+      }
+    }
+  }
+}
+
+.card3 {
+  @include media('>tablet') {
+    &:hover {
+      & ~ .card4 {
+        transform: translateX(50%);
+
+        @include media('>desktop') {
+          transform: translateX($hovered-value5-big);
+        }
+      }
+    }
+  }
+}
+
+.happenings {
+  width: 100%;
+  padding: 5.6rem 0 5.6rem;
+  overflow: hidden;
+  position: relative;
+  @include grid();
+  background-color: $darkGreen;
+
+  @include media('<=tablet') {
+    padding: 5rem 0;
+  }
+
+  & .bgSvg {
+    position: absolute;
+    width: 100%;
+  }
+
+  & .wrap {
+    width: 100%;
+    max-width: $layout-breakpoint-medium;
+    @include flexed(unset, center, column);
+    row-gap: 3.8rem;
+    z-index: 1;
+
+    @include media('<=tablet') {
+      max-width: 100%;
+      row-gap: 3rem;
+    }
+
+    & .heading {
+      width: 100%;
+      @include grid();
+
+      & h2 {
+        color: $white;
+        text-align: center;
+        font-family: var(--font-made-mirage);
+        font-size: 3.75rem;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 130%;
+        max-width: 40rem;
+
+        @include media('<=tablet') {
+          font-size: 2.5rem;
+        }
+      }
+    }
+
+    & .cardsOverlay {
+      width: 100%;
+      @include grid();
+      position: relative;
+      min-height: 26.25rem;
+
+      @include media('<=tablet') {
+        min-height: unset;
+        height: auto;
+        @include flexed(unset, center, column);
+        row-gap: 1rem;
+      }
+
+      & .card {
+        position: absolute;
+        width: 37.5rem;
+        height: 26.25rem;
+        padding: 3rem;
+        row-gap: 0.94rem;
+        @include flexed(unset, flex-start, column);
+        border-radius: 2.25rem 2.25rem 0rem 2.25rem;
+        box-shadow: 0px 2.25px 18px 0px rgba(0, 0, 0, 0.16);
+        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        overflow: hidden;
+
+        @include media('<=tablet') {
+          position: relative;
+          width: 100%;
+          height: auto;
+          padding: 2.5rem 1.5rem;
+          border-radius: 2rem 2rem 0rem 2rem;
+          box-shadow: 0px 3px 24px 0px rgba(0, 0, 0, 0.16);
+          row-gap: unset;
+        }
+
+        & .icon {
+          width: 5.6rem;
+          height: 5.6rem;
+
+          @include media('<=tablet') {
+            width: 5rem;
+            height: 5rem;
+            margin-bottom: 1.25rem;
+          }
+        }
+
+        & .decor {
+          position: absolute;
+          right: 0;
+          top: 0;
+
+          @include media('<=tablet') {
+            max-width: 4.5rem;
+            max-height: 4.5rem;
+          }
+        }
+
+        & h3 {
+          color: $darkGreen;
+          font-family: var(--font-made-mirage);
+          font-size: 2.5rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+
+          @include media('<=tablet') {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+          }
+        }
+
+        & p {
+          color: $darkGreen;
+          font-size: 1.125rem;
+          font-weight: 400;
+          line-height: 150%;
+
+          @include media('<=tablet') {
+            font-size: 1rem;
+          }
+        }
+
+        &:nth-child(1) {
+          background-color: $secondaryLightBlue;
+        }
+
+        &:nth-child(2) {
+          background-color: $lightGrass;
+        }
+
+        &:nth-child(3) {
+          background-color: $lightPurple;
+        }
+
+        &:nth-child(4) {
+          background-color: $lightBrown;
+        }
+
+        @for $i from 1 through $card-count {
+          $left-value: calc((#{$i} - 1) * 17.8%);
+          z-index: 1;
+
+          &:nth-child(#{$i}) {
+            left: $left-value;
+
+            @include media('<=tablet') {
+              left: unset;
+            }
+          }
+        }
+
+        @include media('>desktop') {
+          @for $i from 1 through $card-count {
+            $left-value-big: calc((#{$i} - 1) * 19.4%);
+            z-index: 1;
+
+            &:nth-child(#{$i}) {
+              left: $left-value-big;
+              //   background-color: nth($colors, $i);
+            }
+          }
+        }
+      }
+    }
+  }
+}

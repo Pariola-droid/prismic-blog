@@ -1,0 +1,11 @@
+https://api.instagram.com/oauth/authorize?client_id=1367559224154787&redirect_uri=https://pariola.dev/auth&scope=user_profile,user_media&response_type=code
+
+<!-- new -->
+
+https://www.pariola.dev/auth?code=AQCAiF9TX-uRSqjkQVP8elGVYHiTYAAN2f-SWzSUT5X7166g3qTpcCJqDv7gz6Ymt1Qs9jRbvegCyRg7PAtiIQHaAsC2EmvP8-wFx023vJpUPeKQgeAE5SEk7pqkQvB4n62i6yGPBzkS8SGcODQt85YVgVFcUBhpQTMe8ai90vLbO8ORLOpm1cnosAxxv5we0cELwxUkFOwxq8rtgWhB-9-zKNGP9s7EVHLcJSsH7zkcNg#_
+
+"access_token": "IGQWRONkdyQ3NrTm9PU2tJNkthaXl6anRkU3NoLXF2cENHWVNRMEE1eEd6R2pBX3FnRm5tSlY3ZAHNLTWxUMWtUSjJOcHBzQmFjSXlSWTVfQ2JoUWZAfaE1GWnJYQnJDOWVkaGdzMU16YUFLXzU3OHBncnlyYjBmcjNFVDhiUS1OUi1EZAwZDZD",
+"user_id": 6874075022658686
+
+curl -i -X GET "https://graph.instagram.com/access_token
+?grant_type=ig_exchange_token&client_secret=52332b6159bb885d700285f702da164a&access_token=IGQWRONkdyQ3NrTm9PU2tJNkthaXl6anRkU3NoLXF2cENHWVNRMEE1eEd6R2pBX3FnRm5tSlY3ZAHNLTWxUMWtUSjJOcHBzQmFjSXlSWTVfQ2JoUWZAfaE1GWnJYQnJDOWVkaGdzMU16YUFLXzU3OHBncnlyYjBmcjNFVDhiUS1OUi1EZAwZDZD"

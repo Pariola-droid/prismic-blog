@@ -1,0 +1,46 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"source_title",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Adipisicing qui est commodo ut deserunt incididunt do fugiat eu ea ad pariatur aute."
+									}
+								}
+							]
+						}
+					],
+					[
+						"source_description",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "making",
+							"type": "Text"
+						}
+					],
+					[
+						"source_link",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "http://twitter.com"
+							}
+						}
+					]
+				]
+			}
+		]
+	}
+]

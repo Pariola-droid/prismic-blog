@@ -1,0 +1,238 @@
+@import '../../../styles/core/variables.scss';
+@import '../../../styles/core/typography.scss';
+@import '../../../styles/utils/mixins.scss';
+@import '../../../styles/utils/breakpoints.scss';
+
+.postHeader {
+  width: 100%;
+  @include grid();
+  padding: 6.5rem 0 5.6rem;
+  overflow: hidden;
+  position: relative;
+
+  @include media('<=tablet') {
+    padding: 5rem 0 5rem;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: $lightGrass;
+
+    @include media('<=tablet') {
+      height: 70%;
+    }
+  }
+
+  & .wrap {
+    width: 100%;
+    max-width: $layout-breakpoint-medium;
+    @include grid();
+    padding-top: 3.75rem;
+
+    @include media('<=tablet') {
+      max-width: 100%;
+      padding-top: 2.5rem;
+    }
+
+    & .preContent {
+      width: 100%;
+      max-width: 65.6rem;
+      height: auto;
+      z-index: 1;
+      @include flexed(unset, center, column);
+      row-gap: 1.88rem;
+
+      @include media('<=tablet') {
+        max-width: 100%;
+        row-gap: 1.5rem;
+      }
+
+      & .date {
+        color: $lightGreen;
+        text-align: center;
+        font-family: var(--font-gilroy);
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 0.24rem;
+        text-transform: uppercase;
+
+        @include media('<=tablet') {
+          font-size: 1rem;
+        }
+      }
+
+      & .title {
+        color: $darkGreen;
+        text-align: center;
+        font-family: var(--font-made-mirage);
+        font-size: 3rem;
+        font-weight: 900;
+        line-height: 130%;
+        max-width: 63.75rem;
+
+        @include media('<=tablet') {
+          font-size: 2rem;
+          max-width: 100%;
+        }
+      }
+
+      & .credits {
+        width: 100%;
+        @include flexed(center, center, row);
+        column-gap: 1.88rem;
+
+        @include media('<=tablet') {
+          column-gap: 1.5rem;
+        }
+
+        @include media('<=phone') {
+          row-gap: 1rem;
+          width: max-content;
+          @include flexed(unset, flex-start, column);
+        }
+
+        & .author {
+          width: max-content;
+          @include flexed(flex-start, center, row);
+          column-gap: 0.75rem;
+
+          &Image {
+            width: 3.75rem;
+            height: 3.75rem;
+            border-radius: 100%;
+            border: 3px solid $white;
+            overflow: hidden;
+
+            @include media('<=tablet') {
+              width: 3.5rem;
+              height: 3.5rem;
+            }
+
+            & img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: center;
+              border-radius: inherit;
+            }
+          }
+
+          &Name {
+            width: max-content;
+            @include flexed(unset, flex-start, column);
+            row-gap: 0.38rem;
+            color: $darkGreen;
+            font-family: var(--font-gilroy);
+
+            & .label {
+              font-size: 0.75rem;
+              font-weight: 500;
+              line-height: normal;
+              letter-spacing: 0.03rem;
+              text-transform: uppercase;
+              opacity: 0.6;
+            }
+
+            & h5 {
+              font-size: 1.3rem;
+              font-weight: 500;
+              line-height: normal;
+              text-transform: capitalize;
+
+              @include media('<=tablet') {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+
+      & .bigImage {
+        position: relative;
+        height: 37.5rem;
+        width: 65.6rem;
+        border-radius: 3rem;
+        overflow: hidden;
+        margin-top: calc(3.75rem - 1.88rem);
+
+        @include media('<=tablet') {
+          width: 100%;
+          height: 20rem;
+          border-radius: 1.5rem;
+        }
+
+        @include media('<=phone') {
+          height: 14rem;
+        }
+
+        & img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+
+        & .category {
+          top: 2.06rem;
+          left: 2.06rem;
+          height: 2.9rem;
+          padding: 0 1.68rem;
+          position: absolute;
+          border-radius: 11.25rem;
+          border: 3px solid $white;
+          @include grid();
+          //
+          color: $darkBlue;
+          font-family: var(--font-gilroy);
+          font-size: 1.125rem;
+          font-weight: 600;
+          line-height: 160%;
+          padding-top: 3px;
+
+          @include media('<=tablet') {
+            top: 1rem;
+            left: 1rem;
+            height: 2rem;
+            font-size: 0.75rem;
+            padding: 0 1.125rem;
+          }
+
+          &.weight {
+            color: $darkBlue;
+            background: $secondaryLightBlue;
+          }
+
+          &.nutrition {
+            color: $brown;
+          }
+
+          &.life {
+            color: $grass;
+          }
+
+          &.news {
+            color: $mud;
+          }
+
+          &.posts {
+            color: $purple;
+          }
+
+          &.tips {
+            color: $darkBlue;
+          }
+
+          &.recipes {
+            color: $brown;
+          }
+        }
+      }
+    }
+  }
+}

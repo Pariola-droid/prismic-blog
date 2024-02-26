@@ -1,0 +1,106 @@
+@import '../../../styles/core/variables.scss';
+@import '../../../styles/core/typography.scss';
+@import '../../../styles/utils/mixins.scss';
+@import '../../../styles/utils/breakpoints.scss';
+
+.mission {
+  width: 100%;
+  background-color: $lightGrass;
+  @include grid();
+  padding: 5.6rem 0;
+
+  @include media('<=tablet') {
+    padding: 5rem 0 5rem;
+  }
+
+  & .wrap {
+    width: 100%;
+    display: grid;
+    max-width: $layout-breakpoint-medium;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.88rem;
+
+    @include media('<=tablet') {
+      grid-template-columns: 1fr;
+      row-gap: 2.5rem;
+      max-width: 100%;
+    }
+
+    & .col {
+      height: 30rem;
+      width: 100%;
+      border-radius: 1.5rem;
+      background-color: $white;
+      position: relative;
+
+      @include media('<=tablet') {
+        height: unset;
+      }
+
+      &:nth-child(1) {
+        & .crosses {
+          position: absolute;
+          left: -15%;
+          bottom: -16%;
+
+          @include media('<=tablet') {
+            width: 7.5rem;
+            height: 7.5rem;
+            left: unset;
+            bottom: unset;
+            right: -0.875rem;
+            top: -2.49188rem;
+          }
+        }
+
+        & .fullImg {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 1.5rem;
+        }
+
+        @include media('<=tablet') {
+          height: 20rem;
+        }
+      }
+
+      &:nth-child(2) {
+        padding: 3rem;
+        @include flexed(unset, flex-start, column);
+        gap: 1.5rem;
+
+        & h4 {
+          color: $darkGreen;
+          font-family: var(--font-made-mirage);
+          font-size: 2.25rem;
+          font-weight: 700;
+          line-height: normal;
+
+          @include media('<=tablet') {
+            font-size: 2rem;
+          }
+        }
+
+        & p {
+          color: $darkGrey;
+          font-family: var(--font-gilroy);
+          font-size: 1.125rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 150%;
+
+          @include media('<=tablet') {
+            font-size: 1rem;
+          }
+        }
+
+        @include media('<=tablet') {
+          padding: 1.5rem;
+          gap: 1rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+@import '../../../styles/core/variables.scss';
+@import '../../../styles/core/typography.scss';
+@import '../../../styles/utils/mixins.scss';
+@import '../../../styles/utils/breakpoints.scss';
+
+.preFooter {
+  width: 100%;
+  height: auto;
+  @include grid();
+  padding: 6.8rem 0;
+
+  @include media('<=tablet') {
+    padding: 2rem 0 5rem;
+  }
+
+  & .wrap {
+    border-radius: 2.5rem;
+    background: $green;
+    width: 100%;
+    max-width: $layout-breakpoint-medium;
+    height: 30rem;
+    @include flexed(center, center, column);
+    position: relative;
+
+    @include media('<=tablet') {
+      max-width: 100%;
+      height: auto;
+      padding: 5rem 2.5rem;
+      row-gap: 1.25rem;
+    }
+
+    & .illy_sketch {
+      position: absolute;
+      right: 5rem;
+      top: -5.8rem;
+
+      @include media('<=tablet') {
+        max-width: 6.8rem;
+        max-height: 6.8rem;
+        right: -1rem;
+        top: -2.6rem;
+      }
+    }
+
+    & .illy_star {
+      position: absolute;
+      left: 0;
+      bottom: -4.6rem;
+
+      @include media('<=tablet') {
+        max-width: 4.9rem;
+        max-height: 4.9rem;
+        left: -0.5rem;
+        bottom: -1.8rem;
+      }
+    }
+
+    & h2 {
+      color: $darkGreen;
+      text-align: center;
+      font-family: var(--font-made-mirage);
+      font-size: 3.8rem;
+      font-weight: 900;
+      line-height: 130%;
+      margin-bottom: 0.9rem;
+
+      @include media('<=tablet') {
+        font-size: 3rem;
+        margin: 0;
+      }
+
+      &.custom {
+        max-width: 51rem;
+      }
+    }
+
+    & p {
+      max-width: 34rem;
+      color: $darkGrey;
+      text-align: center;
+      font-family: var(--font-gilroy);
+      font-size: 1.13rem;
+      font-weight: 500;
+      line-height: 150%;
+      margin-bottom: 1.9rem;
+
+      @include media('<=tablet') {
+        max-width: 100%;
+        font-size: 1rem;
+        margin: 0;
+      }
+    }
+
+    & button {
+      height: 3.8rem;
+      width: auto;
+      border-radius: 3.3rem;
+      background: $darkGreen;
+
+      & a {
+        @include grid();
+        height: 100%;
+        padding: 0 3.8rem;
+        color: $white;
+        font-family: var(--font-gilroy);
+        font-size: 0.9rem;
+        font-weight: 700;
+        line-height: 160%;
+      }
+    }
+  }
+}

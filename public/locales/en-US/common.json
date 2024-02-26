@@ -1,0 +1,465 @@
+{
+  "Meta": {
+    "title": "Sustaineable weight loss for people",
+    "description": "Sustaineable weight loss for people"
+  },
+  "Common": {
+    "backed": "Our approach is rooted in science, guiding you from the cycle of trial and error to evidence-based methods. It's time to break free from the old routine and embrace a lasting change with Qilo - the last program you'll ever need to start.",
+    "backedTwo": {
+      "title": "Backed by science",
+      "text": "Our approach is rooted in science, guiding you from the cycle of trial and error to evidence-based methods. It's time to break free from the old routine and embrace a lasting change with Qilo - the last program you'll ever need to start."
+    }
+  },
+  "Homepage": {
+    "hero": {
+      "title": "The last weight loss program you'll ever need to start",
+      "paragraph": "Science-based weight care, guided by experts, is based on your individual needs",
+      "image-text": "Sustainable weight loss starts here"
+    },
+    "help": {
+      "title": "Here’s how we can help you",
+      "paragraph": "We offer a range of services to help you lose weight, including nutrition, exercise, and lifestyle coaching.",
+      "point": {
+        "one": {
+          "title": "Lose Weight",
+          "paragraph": "Discover the secret to losing weight and keeping it off for good. Say goodbye to crash diets and hello to a healthier, happier you!"
+        },
+        "two": {
+          "title": "Reverse Obesity",
+          "paragraph": "Tackle obesity with our expert-led clinical approach. We provide holistic, compassionate care to guide you towards a healthier life."
+        },
+        "three": {
+          "title": "Regain your confidence",
+          "paragraph": "Rediscover the joy of self-assurance. Our program helps you rebuild confidence through positive physical and mental health practices."
+        },
+        "four": {
+          "title": "Improve your health",
+          "paragraph": "Elevate your well-being with our holistic health strategies. Experience renewed energy, vitality, and an overall sense of wellness"
+        }
+      }
+    },
+    "wholesome": {
+      "title": "A comprehensive weight-loss program crafted ",
+      "titleSpan": "just for you",
+      "paragraph": "Our program is based on the belief that real success comes from understanding your body, its rhythms, and its specific needs. That's why we've created a comprehensive approach that's uniquely customized for you. By embracing personalization, we make sure you get guidance and support that easily fits into your life, making your weight loss journey not just effective but also enjoyable."
+    },
+    "sixPillars": {
+      "title": {
+        "a": "More than just a plan, it's a ",
+        "highlight": "lifestyle",
+        "b": " shift"
+      },
+      "pillar": {
+        "one": {
+          "title": "Nutrition",
+          "text": "Proper nutrition isn't just about counting calories; it's the fuel that powers your journey. We'll teach you to make smart food choices that nourish your body and keep those cravings at bay."
+        },
+        "two": {
+          "title": "Movement",
+          "text": "Exercise isn't just about sweat and strenuous routines; it's about finding joy in motion. We'll help you discover the activities you love, making fitness a fun part of your life."
+        },
+        "three": {
+          "title": "Medication",
+          "text": "Sometimes, your body needs a little extra support, and that's perfectly okay. Our experts can guide you on medication options, that complement your journey safely and effectively."
+        },
+        "four": {
+          "title": "Sleep",
+          "text": "Your body needs rest to reset! We'll show you how quality sleep supports weight loss, leaving you refreshed, focused, and ready to conquer your goals."
+        },
+        "five": {
+          "title": "Social Support",
+          "text": "Lean on your personal coach and connect with peers who understand your journey. Our supportive provides motivation, accountability, and friendship to keep you on track."
+        },
+        "six": {
+          "title": "Emotional Health",
+          "text": "It's not just about the body, it's about the mind too! Managing stress, anxiety, and emotional well-being empowers you to conquer your weight loss goals with confidence and resilience."
+        }
+      }
+    },
+    "notQilo": {
+      "title": "What you get with ",
+      "titleSpan": "Qilo",
+      "one": {
+        "title": "Coaching",
+        "text": "Guidance from a coach who truly understands you"
+      },
+      "two": {
+        "title": "Clinical Care",
+        "text": "Health experts, optional medication, and personalized treatment plans"
+      },
+      "three": {
+        "title": "Digital Tools",
+        "text": "Logs, curriculum, mindful eating timer, community and more"
+      },
+      "four": {
+        "title": "Nutrition Plan",
+        "text": "Enjoyable and realistic nutrition guidance, just for you"
+      }
+    },
+    "saying": {
+      "title": {
+        "a": "They ",
+        "span": " Achieved ",
+        "b": "it – You Can Too"
+      },
+      "one": {
+        "name": "Hafsat",
+        "quote": "17kg down, and my relationship with food is a lot better",
+        "message": "I've lost 17kg and seven inches from my belly. My relationship with food has improved, and I make healthier choices. The program has positively affected my periods, reducing cramps and breakouts.",
+        "videoLink": "WWqsMHZgQso"
+      },
+      "two": {
+        "name": "Chidinma",
+        "quote": "Qilo personalized everything, transforming my life in 7 months",
+        "message": "I was in the Qilo Program for 7 months, and my life was transformed. The Qilo Team are superstars, and everything is personalized, so I felt I could talk about anything. I learned a lot about nutrition, how to eat, and lifestyle changes. I ended the program three months ago, and I still hear my coach's voice.",
+        "videoLink": "r26i8yW9riE"
+      },
+      "three": {
+        "name": "Joy",
+        "quote": "I lost 11.9 kg with Qilo and found relief from migraines",
+        "message": "I’ve struggled with my weight for as long as I can remember. With Qilo, I’ve lost over 11 kg, but my biggest wins are my non-scale victories. I had persistent migraines that finally went away, and I would get sick very easily, but that has also gradually changed.",
+        "videoLink": "9RbfDBnygWA"
+      },
+      "four": {
+        "name": "Doris",
+        "quote": "Qilo helped me gain my confidence back",
+        "message": "I had tried so many teas—you name them! None worked. I started using the meal plan, replacing the harmful substances with natural foods. And now I can wear my shorts and crop tops, and I've gotten my confidence back!",
+        "videoLink": "zyML637YtRk"
+      },
+      "five": {
+        "name": "Faith",
+        "quote": "Qilo made it easier for me, I've lost 18kg so far",
+        "message": "Before discovering Qilo, I struggled with weight loss while trying various methods on my own. However, Qilo changed the game for me, making the journey more manageable. Thanks to their support, I've successfully shed 18kg, and I continue to progress towards my goals with confidence.",
+        "videoLink": "MWFJIx6HSDQ"
+      }
+    },
+    "fourGrid": {
+      "one": {
+        "title": {
+          "a": "For every pound you lose, a healthy habit is",
+          "span": " gained"
+        },
+        "text": "Every pound shed opens the door to a new, healthy habit. This journey isn't about rigid diets;  it's about exploring, enjoying, and adopting habits that improve your well-being."
+      },
+      "two": {
+        "title": {
+          "a": " with care, not judgment",
+          "span": "Tackling obesity"
+        },
+        "text": "We understand that managing obesity requires a blend of expert clinical care and a compassionate, judgment-free approach. We offer tailored clinical solutions that include the latest in weight loss medications, ensuring that you receive care that is not only effective but also personalized to you."
+      }
+    },
+    "careTeam": {
+      "title": "The experts who have your back"
+    },
+    "backed": {
+      "title": "Backed by science",
+      "text": "Our approach is rooted in science, guiding you from the cycle of trial and error to evidence-based methods. It's time to break free from the old routine and embrace a lasting change with Qilo - the last program you'll ever need to start."
+    }
+  },
+  "Program": {
+    "hero": {
+      "title": "Lose weight the healthy way, not the hard way",
+      "paragraph": "Losing weight can be challenging, but we believe it shouldn't come at the cost of your well-being. We offer a supportive, comprehensive program that focuses on lasting lifestyle changes and personalized clinical care.",
+      "image-text": "Sustainable habits, lasting results"
+    },
+    "postHeader": {
+      "one": {
+        "title": "More than just weight loss",
+        "texts": {
+          "one": "Did you know that 80% of chronic diseases are preventable? That's right, much of our health and well-being lies right in our own hands. ",
+          "two": "We're here to empower you, beyond just shedding pounds, to be stronger, more confident, and ready to enjoy life to the fullest—for longer."
+        }
+      },
+      "two": {
+        "title": "Manage metabolic conditions",
+        "list": [
+          "Non-alcoholic fatty liver disease (NAFLD)",
+          "Polycystic Ovarian Syndrome (PCOS)",
+          "Prediabetes",
+          "Obesity"
+        ]
+      }
+    },
+    "howItWorks": {
+      "one": "Here at Qilo, the program offers a different path - one focused on sustainable progress and lasting results. We begin by understanding you. An assessment helps us tailor a plan based on your unique needs and preferences. Imagine having realistic meal plans you enjoy, not restrictive diets. Track your progress easily with our digital tools, and find support in our welcoming community. Daily educational content empowers you, while personalized workout recommendations keep you moving. For those needing extra support, our medical pathway offers a dedicated care team.",
+      "two": "Get ongoing consultations with a doctor, a personal coach, and a care coordinator. We even offer optional weight loss medication. Remember, your well-being goes beyond the physical. That's why we address the 6 pillars of metabolic health: nutrition, movement, social support, emotional health, sleep, and medication (when needed). All are delivered with genuine care and empathy because we believe nourishing your mind is just as important as nourishing your body. Are you ready to start your unique journey to a healthier, happier you?"
+    },
+    "diagnose": {
+      "title": "An evidence-based ",
+      "titleSpan": "approach",
+      "problems": {
+        "one": {
+          "title": "Health coaching",
+          "text": "Your dedicated coach helps you unpack emotions impacting your journey and build lasting healthy habits"
+        },
+        "two": {
+          "title": "Digital Tools",
+          "text": "Discover how tools like mindful eating timers, educational content, progress tracking, weekly habits, and more can play a vital role in your success."
+        },
+        "three": {
+          "title": "Clinical Care",
+          "text": "Experience the difference that expert clinical care combined with breakthrough medication can make on your journey."
+        }
+      }
+    },
+    "weightPlan": {
+      "paragraph": "Building upon the insights from your assessments, we curate a plan around your specific needs. We offer two categories of plans: medical and wellness. Whether you require medical support or are seeking a holistic wellness approach, our goal is to provide you with the guidance and care you deserve."
+    },
+    "sixGrid": {
+      "one": {
+        "title": "Medication",
+        "text": "For some, losing weight can be a real challenge, even with diet and exercise. Factors like genetics, hormones, or other health conditions might make it harder.  That's where medication can help. Medication, when prescribed by a healthcare professional, can provide the extra support needed for your weight loss journey. "
+      },
+      "two": {
+        "title": "How medication might help",
+        "list": [
+          "Reduces appetite and cravings",
+          "Regulates blood sugar levels",
+          "Slows digestion and absorption",
+          "Increases feelings of fullness",
+          "Supports weight loss efforts",
+          "Improves metabolic function"
+        ]
+      },
+      "three": {
+        "title": "How to get the best results from medication",
+        "text": "Lifestyle changes are essential when combining medication with your weight loss journey. They create a strong foundation for sustainable results. Medication can provide a helpful boost, but long-term success comes from adopting healthier habits and making positive choices that support your well-being. Together, they form a winning combination for lasting change."
+      }
+    },
+    "benefit": {
+      "title": "Who will benefit from Qilo?",
+      "paragraph": "Our solution is customized to each individual depending on their specific needs.",
+      "list": [
+        "Individuals who have obesity and overweight",
+        "Diabetic and hypertensive patients looking to manage their weight and conditions",
+        "People Seeking to Heal Their Relationship with Food",
+        "Seniors aiming for healthy aging",
+        "Post-Weight Loss Surgery Patients",
+        "Women with Hormone-Related Weight Gain eg PCOS"
+      ]
+    },
+    "whyQilo": {
+      "one": {
+        "title": "Professional care team",
+        "text": "Designed and supervised by experts, Qilo's program ensures you receive top-notch guidance and support from a team of healthcare professionals."
+      },
+      "two": {
+        "title": "Easy to use plan",
+        "text": "Qilo's user-friendly interface makes navigating your health journey straightforward and stress-free, ensuring a smooth, enjoyable experience."
+      },
+      "three": {
+        "title": "Science-backed",
+        "text": "Get a science-based, weight care regimen that works. It's not just hype or random fad diets, it's a weight care solution built on proven scientific and clinically proven methods."
+      },
+      "four": {
+        "title": "Community",
+        "text": "Join a supportive community guided by coaches and connect with peers who share similar health goals, fostering motivation and accountability."
+      },
+      "five": {
+        "title": "Personalized approach",
+        "text": "Qilo tailors your health plan to your unique needs and goals, ensuring a customized approach to your wellness."
+      },
+      "six": {
+        "title": "Medication",
+        "text": "When necessary, Qilo incorporates safe, clinically approved medications as part of your comprehensive treatment plan, enhancing your path to wellness."
+      },
+      "seven": {
+        "title": "Behavioral intervention",
+        "text": "Qilo focuses on lasting behavioral changes, empowering you to develop healthier habits that contribute to long-term success in your weight and health journey."
+      }
+    }
+  },
+  "HowItWorks": {
+    "hero": {
+      "title": "Lose weight by listening to your body, not fighting it",
+      "paragraph": "Finally, a weight loss program that works with your biology, not against it.",
+      "image-text": "Sustainable weight loss starts here"
+    },
+    "postHeader": {
+      "one": {
+        "title": "Health Coaching",
+        "text": "Get paired with expert health coaches who provide personalized guidance, helping you understand and work with your body's unique needs."
+      },
+      "two": {
+        "title": "The science behind Qilo",
+        "text": "Qilo's medical plan includes safe and effective medication options, carefully prescribed by healthcare professionals, to complement your body's natural processes."
+      },
+      "three": {
+        "title": "Medication-assisted weight loss",
+        "text": "With Qilo, you have access to medical professionals who can identify and address underlying health issues, ensuring your weight loss plan aligns with your biology."
+      },
+      "four": {
+        "title": "Curriculum on Metabolic Health",
+        "text": "Qilo offers a curriculum focused on metabolic health, delivering daily bite-sized content to educate and empower you about your body's metabolic processes."
+      }
+    },
+    "tackling": {
+      "title": "The \"whys\" and \"hows\" behind your weight loss struggles",
+      "point": {
+        "one": {
+          "title": "Emotional Health",
+          "text": "Explore and address the underlying emotions affecting your motivation and why you eat the way you do"
+        },
+        "two": {
+          "title": "Nutrition",
+          "text": "Understand how your food choices impact your body at a fundamental level, going beyond temporary fixes to achieve sustainable health"
+        },
+        "three": {
+          "title": "Develop Healthy Habits",
+          "text": "Uncover and transform your daily routines by identifying and altering the deep-seated habits that impact your metabolic health."
+        }
+      }
+    },
+    "keepWeight": {
+      "faq": {
+        "one": {
+          "question": "How is Qilo a science-based weight loss program?",
+          "answer": "Most random weight loss programs are not personalized and do not include medication. There’s no prior assessment to determine underlying factors contributing to weight gain or inability to lose weight, they are sometimes based on a person’s personal experience. Qilo is a personalised science-based, and expertly vetted weight loss program designed by medical doctors and dietitians that includes complete assessment and use of Government approved medications for weight loss."
+        },
+        "two": {
+          "question": "Who is in my care team?",
+          "answer": "Medical doctor, coach, and coordinator."
+        },
+        "three": {
+          "question": "Will I be given medications?",
+          "answer": "Based on your medical, metabolic, genetic, or hormonal assessment, your doctor will determine if you’ll be prescribed medications or not."
+        },
+        "four": {
+          "question": "What results will I see?",
+          "answer": "Each person is unique, and results will vary for individuals, but members on our program on average see a significant reduction in waist circumference, decreased dress size, increased energy, and better eating habits, in addition to losing 1-2 pounds per week."
+        }
+      }
+    }
+  },
+  "Science": {
+    "hero": {
+      "title": "Weight Loss is\nmore than…",
+      "paragraph": "Eat this, not that. Do this, not that",
+      "title2": "There’s a science to it!",
+      "image-text": "Sustainable weight loss starts here"
+    },
+    "postHeader": {
+      "one": {
+        "title": "It’s not what you think",
+        "text": "Scientific research has shown that a healthy weight is beyond what people eat or do.\n\nThere are hormonal, biological, metabolic, and psychological factors that contribute to your weight."
+      },
+      "two": {
+        "title": "Go beyond the surface",
+        "text": "Healthy weight is addressed from the inside out. When you deal with what’s going on at the cellular level, it shows physically."
+      }
+    },
+    "medication": {
+      "title": "Medication-assisted Weight Loss",
+      "text": "Everyone's weight loss journey is unique. If you've tried other approaches and still haven't reached your goals, that's okay! For some, medication, carefully monitored by a doctor, can provide much-needed support. It works by fine-tuning your body's responses, making healthy choices feel easier and weight loss more achievable."
+    }
+  },
+  "Medications": {
+    "hero": {
+      "title": "Lose weight the medical way",
+      "paragraph": "Safe and effective, recommended by medical doctors.",
+      "image-text": "100% committed to a healthier you"
+    },
+    "twoColumn": {
+      "one": {
+        "title": "Medication-assisted weight loss",
+        "list": [
+          "High BMI individuals",
+          "Obesity due to medical conditions",
+          "Bariatric surgery candidates",
+          "Hormonal imbalances affecting weight",
+          "Tried traditional methods without success"
+        ]
+      },
+      "two": {
+        "title": "Why medication",
+        "text": "Prescription medication targets biological factors beyond your control, like hormone imbalances and genetics, to support effective weight management. It's a science-backed solution addressing these complex aspects."
+      }
+    },
+    "realStories": {
+      "title": "More than just pounds lost, lives transformed"
+    }
+  },
+  "AboutUs": {
+    "hero": {
+      "title": "The Qilo",
+      "titleSpan": " Story",
+      "paragraph": "In the United States, we're facing a growing epidemic of obesity and overweight, particularly in underserved communities where access to quality healthcare is limited. We recognized that the traditional 'eat less, exercise more' approach wasn't effectively addressing these issues. That's why we assembled a diverse team of experts to develop an evidence-based solution tailored to the unique needs and cultural backgrounds of these communities. Thus, Qilo was born. We're committed to providing accessible and culturally sensitive weight care that prioritizes holistic health and long-term sustainability, empowering everyone to live healthier, fuller lives."
+    },
+    "whyQilo": {
+      "one": "To empower individuals to take charge of their health, build healthy habits, and reduce the risk of chronic diseases for a longer, healthier life",
+      "two": "To make weight care affordable and accessible to the People",
+      "three": "To change how obesity is treated in People, giving it the clinical attention it truly needs, along with a holistic approach",
+      "four": "To take the guesswork out of weight loss struggles, by offering evidence-based care."
+    },
+    "mission": {
+      "title": "Our mission",
+      "text": "Our mission is to revolutionize weight care by providing an accessible, culturally sensitive solution to combat the rising rates of obesity and related health issues. We are committed to an evidence-based approach, with behavioral intervention and clinical care at the core, that addresses the diverse needs of individuals; empowering them to live healthier, for longer."
+    },
+    "cta": {
+      "title": "Your healthiest weight awaits you",
+      "text": "Discover the vibrant vitality that awaits you as you embark on a journey toward your healthiest weight yet. Your brighter, healthier future begins now."
+    }
+  },
+  "Testimonial": {
+    "hero": {
+      "title": "What our members are saying",
+      "paragraph": "Real People with real stories of how Qilo helped them lose weight and form healthy habits"
+    }
+  },
+  "Pricing": {
+    "hero": {
+      "title": "Weight loss should be a journey, not a cycle",
+      "paragraph": "Invest towards your health today. Start your weight loss journey for the last time."
+    },
+    "plan": {
+      "monthly": {
+        "wellness": "45",
+        "medical": "99"
+      }
+    },
+    "difference": {
+      "one": "Comprehensive Approach",
+      "two": "Supervised by Professionals",
+      "three": "Tailored to Each Individual",
+      "four": "Realistic Nutrition Plans",
+      "five": "Clinical Care and Medication Options",
+      "six": "Behavioral Change Techniques"
+    }
+  },
+  "WeTreat": {
+    "hero": {
+      "title": "Your journey to better health",
+      "text": "Beyond weight loss, we address the root causes of weight-related conditions, providing you with evidence-based treatments and empowering you to make informed choices for your health."
+    },
+    "postHeader": {
+      "one": {
+        "title": "More than just weight loss",
+        "text": "Did you know that up to 80% of chronic diseases are preventable? More than we realise, much of our health lies within our power.\n\nOur approach is centered around your overall health and happiness because we understand that true wellness encompasses more than just losing weight. It's about empowering you to make lasting, positive changes in your life and fostering a sense of holistic well-being."
+      },
+      "two": {
+        "title": "Manage metabolic conditions",
+        "list": [
+          "Non-alcoholic fatty liver disease (NAFLD)",
+          "Polycystic Ovarian Syndrome (PCOS)",
+          "Prediabetes",
+          "Obesity"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Sustainable solution to keep the weight off forever!",
+      "text": "Discover a sustainable solution that ensures your weight stays off for good, empowering you to live a healthier and happier life."
+    }
+  },
+  "Personalized": {
+    "hero": {
+      "title": "Your body, your Journey, your results",
+      "text": "Everybody is different, and so is your weight loss journey. Qilo's personalized care celebrates your individuality, tailoring a program that respects your needs and helps you thrive."
+    },
+    "postHeader": {
+      "title": "Personalized to your biology",
+      "text": "You're not just a number on a scale. You're a unique combination of genes, hormones, and experiences that shape your body and its needs.\n\nAt Qilo, we understand that no two weight loss journeys are the same. That's why our approach is rooted in personalization. We take the time to get to know your biology, your challenges, and your goals.\n\nIt's not just about weight loss, it's about empowering you to thrive in a way that feels natural and kind to you."
+    }
+  }
+}

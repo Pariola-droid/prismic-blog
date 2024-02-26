@@ -1,0 +1,328 @@
+@import '../../../styles/core/variables.scss';
+@import '../../../styles/core/typography.scss';
+@import '../../../styles/utils/mixins.scss';
+@import '../../../styles/utils/breakpoints.scss';
+
+.postHeader {
+  width: 100%;
+  @include grid();
+  padding: 5.62rem 0;
+  overflow: hidden;
+
+  @include media('<=tablet') {
+    padding: 5rem 0;
+  }
+
+  & .wrap {
+    width: 100%;
+    max-width: $layout-breakpoint-medium;
+    @include flexed(unset, center, column);
+    row-gap: 5.6rem;
+
+    @include media('<=tablet') {
+      max-width: 100%;
+      row-gap: 2rem;
+    }
+
+    & .heading {
+      width: 100%;
+      @include flexed(unset, center, column);
+      row-gap: 1.88rem;
+      text-align: center;
+
+      @include media('<=tablet') {
+        row-gap: 1.25rem;
+      }
+
+      & h2 {
+        position: relative;
+        color: $darkGreen;
+        font-family: var(--font-made-mirage);
+        font-size: 3.75rem;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 130%;
+        max-width: 75rem;
+
+        @include media('<=tablet') {
+          font-size: 2.5rem;
+        }
+
+        @include media('<=phone') {
+          max-width: 80%;
+        }
+
+        & span {
+          color: $lightGreen;
+        }
+      }
+
+      & p {
+        color: $darkGreen;
+        font-family: var(--font-gilroy);
+        font-size: 1.3rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        max-width: 32rem;
+
+        @include media('<=tablet') {
+          font-size: 1.125rem;
+          max-width: 95%;
+        }
+      }
+    }
+
+    & .grided {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3.75rem;
+      position: relative;
+
+      @include media('<=tablet') {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+      }
+
+      & .spiralDecor {
+        position: absolute;
+        top: -2.66rem;
+        right: calc(-5.6rem - 4.08rem);
+
+        @include media('<=tablet') {
+          max-width: 13.8rem;
+          max-height: 15.9rem;
+          top: 4.5rem;
+          right: -7.6rem;
+        }
+      }
+
+      & .col {
+        width: 100%;
+        height: 45rem;
+        padding: 3.75rem;
+        border-radius: 1.875rem;
+        overflow: hidden;
+        position: relative;
+        @include flexed(unset, center, column);
+
+        @include media('<=tablet') {
+          padding: 2rem;
+          max-height: 30rem;
+        }
+
+        &:nth-of-type(1) {
+          background-color: $lightPurple;
+
+          & .imgWrap {
+            .decor {
+              left: 0;
+              position: absolute;
+
+              @include media('<=tablet') {
+                left: -1.8rem;
+                bottom: 9.63rem;
+                max-width: 5.7rem;
+                max-height: 3.75rem;
+              }
+            }
+
+            & .img {
+              @include media('<=tablet') {
+                max-width: 65%;
+              }
+
+              @include media('<=phone') {
+                max-width: 100%;
+              }
+
+              @include media('<=375px') {
+                max-width: 75%;
+              }
+            }
+          }
+        }
+
+        &:nth-of-type(2) {
+          background-color: $lightGrass;
+
+          & .imgWrap {
+            .decor {
+              right: 2.48rem;
+              position: absolute;
+
+              @include media('<=tablet') {
+                max-width: 2.9rem;
+                max-height: 3rem;
+                right: 2.1rem;
+                bottom: 12.3rem;
+              }
+            }
+
+            & .img {
+              max-width: 31rem;
+
+              @include media('<=tablet') {
+                max-width: 80%;
+              }
+
+              @include media('<=375px') {
+                max-width: 60%;
+              }
+            }
+          }
+        }
+
+        &:nth-of-type(3) {
+          background-color: $secondaryLightBlue;
+
+          & .imgWrap {
+            & .decor {
+              position: absolute;
+
+              &:nth-child(1) {
+                left: 0;
+                bottom: 6.5rem;
+
+                @include media('<=tablet') {
+                  left: -0.8rem;
+                  bottom: 7.5rem;
+                  max-width: 4rem;
+                  max-height: 4rem;
+                }
+              }
+
+              &:nth-child(2) {
+                right: 1.41rem;
+                bottom: 16.8rem;
+
+                @include media('<=tablet') {
+                  right: 1.8rem;
+                  bottom: 15rem;
+                  max-width: 4rem;
+                  max-height: 4rem;
+                }
+              }
+            }
+
+            & .img {
+              max-width: 33.75rem;
+              margin-right: -1rem;
+              margin-bottom: -5rem;
+
+              @include media('<=tablet') {
+                max-width: 60%;
+                margin-right: 0;
+              }
+
+              @include media('<=phone') {
+                max-width: 95%;
+                margin-bottom: -2.5rem;
+              }
+
+              @include media('<=375px') {
+                max-width: 65%;
+              }
+            }
+          }
+        }
+
+        &:nth-of-type(4) {
+          background-color: $lightMud;
+
+          & .imgWrap {
+            .decor {
+              left: 3.28rem;
+              position: absolute;
+
+              @include media('<=tablet') {
+                left: 2.5rem;
+                bottom: 11.5rem;
+                max-width: 2.7rem;
+                max-height: 3rem;
+              }
+            }
+
+            & .img {
+              max-width: 32rem;
+              margin-left: auto;
+
+              @include media('<=tablet') {
+                max-width: 50%;
+              }
+
+              @include media('<=phone') {
+                max-width: 85%;
+              }
+
+              @include media('<=375px') {
+                max-width: 60%;
+              }
+            }
+          }
+        }
+
+        &Wrap {
+          width: 100%;
+          height: 100%;
+
+          & .textWrap {
+            row-gap: 1.5rem;
+            @include flexed(unset, center, column);
+            text-align: center;
+
+            @include media('<=tablet') {
+              row-gap: 1rem;
+            }
+
+            & h3 {
+              color: $darkGreen;
+              font-family: var(--font-made-mirage);
+              font-size: 3rem;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 130%;
+
+              @include media('<=tablet') {
+                font-size: 2rem;
+              }
+            }
+
+            & p {
+              color: $darkGreen;
+              font-family: var(--font-gilroy);
+              font-size: 1.125rem;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 150%;
+              opacity: 0.8;
+
+              @include media('<=tablet') {
+                font-size: 0.875rem;
+                max-width: 100%;
+              }
+            }
+          }
+        }
+
+        & .imgWrap {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          @include grid();
+
+          & .img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: bottom;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+}

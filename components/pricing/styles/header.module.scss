@@ -1,0 +1,165 @@
+@import '../../../styles/core/variables.scss';
+@import '../../../styles/core/typography.scss';
+@import '../../../styles/utils/mixins.scss';
+@import '../../../styles/utils/breakpoints.scss';
+
+.header {
+  width: 100%;
+  padding: 7rem 0 5.6rem;
+  height: auto;
+  background-color: $white;
+  @include grid();
+  overflow: hidden;
+
+  @include media('<=tablet') {
+    padding: 5rem 0 5rem;
+  }
+
+  & .wrap {
+    width: 100%;
+    @include flexed(unset, center, column);
+    max-width: $layout-breakpoint-medium;
+    position: relative;
+    row-gap: 3.8rem;
+
+    @include media('<=tablet') {
+      row-gap: 3rem;
+      max-width: 100%;
+    }
+
+    & .heading {
+      padding-top: 5.6rem;
+      width: 100%;
+      max-width: 56.25rem;
+      @include flexed(unset, center, column);
+
+      @include media('<=tablet') {
+        padding-top: 5rem;
+      }
+
+      & h1 {
+        color: $darkGreen;
+        text-align: center;
+        font-family: var(--font-made-mirage);
+        font-size: 3.75rem;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 130%;
+
+        @include media('<=tablet') {
+          font-size: 3rem;
+          max-width: 90%;
+        }
+
+        & span {
+          position: relative;
+          color: $lightGreen;
+
+          & svg {
+            position: absolute;
+            width: 110%;
+            left: -5%;
+            bottom: 5%;
+
+            @include media('<=tablet') {
+              width: 95%;
+              left: 10%;
+            }
+          }
+        }
+      }
+
+      & p {
+        color: $darkGreen;
+        text-align: center;
+        font-family: var(--font-gilroy);
+        font-size: 1.3125rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        margin-top: 1.12rem;
+        max-width: 75%;
+        opacity: 0.7;
+
+        @include media('<=tablet') {
+          max-width: 80%;
+          margin-top: 1.25rem;
+          font-size: 1rem;
+        }
+      }
+    }
+
+    & .pricingTab {
+      width: 100%;
+      max-width: 23.5rem;
+      height: 4.5rem;
+      border-radius: 3.8rem;
+      background: #f5f5f5;
+      padding: 0.75rem;
+      @include grid();
+
+      @include media('<=tablet') {
+        padding: 0.5rem;
+        height: 4rem;
+        border-radius: 5rem;
+      }
+
+      & .ptWrap {
+        width: 100%;
+        height: 100%;
+        @include flexed(center, center, row);
+        position: relative;
+        // column-gap: 0.75rem;
+
+        & .indicator {
+          position: absolute;
+          width: 100%;
+          max-width: 10.6rem;
+          height: 100%;
+          background-color: $white;
+          border-radius: 3.8rem;
+          transition: all 0.3s ease-in-out;
+        }
+
+        & button {
+          padding: 0.5rem;
+          width: 100%;
+          max-width: 10.6rem;
+          height: 100%;
+          @include grid();
+          color: $darkGrey;
+          font-family: var(--font-gilroy);
+          font-size: 1.3rem;
+          font-weight: 500;
+          text-transform: capitalize;
+          border-radius: 3.8rem;
+          opacity: 0.5;
+          z-index: 1;
+          transition: all 0.3s ease-in-out;
+
+          @include media('<=tablet') {
+            font-size: 1.25rem;
+            height: 3rem;
+          }
+
+          &.active {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    & .pricingGrid {
+      width: 100%;
+      height: fit-content;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 1.88rem;
+
+      @include media('<=tablet') {
+        grid-template-columns: 1fr;
+        row-gap: 2.5rem;
+      }
+    }
+  }
+}

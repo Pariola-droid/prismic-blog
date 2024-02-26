@@ -1,0 +1,167 @@
+@import '../../../styles/core/variables.scss';
+@import '../../../styles/core/typography.scss';
+@import '../../../styles/utils/mixins.scss';
+@import '../../../styles/utils/breakpoints.scss';
+
+.contactForm {
+  width: 100%;
+  padding: 5.6rem 0;
+  @include grid();
+
+  @include media('<=tablet') {
+    padding: 2rem 0 5rem;
+  }
+
+  & .wrap {
+    width: 100%;
+    max-width: $layout-breakpoint-medium;
+    height: 43.6rem;
+    border-radius: 1.88rem;
+    padding: 3.75rem;
+    row-gap: 1.88rem;
+    background-color: $cream;
+    position: relative;
+    @include flexed(center, center, column);
+    overflow: hidden;
+
+    @include media('<=tablet') {
+      max-width: 100%;
+      height: auto;
+      padding: 4rem 2rem;
+      border-radius: 1.5rem;
+      row-gap: 2.5rem;
+      overflow: hidden;
+    }
+
+    & .lt {
+      position: absolute;
+      bottom: 6.08rem;
+      left: 0;
+
+      @include media('<=tablet') {
+        display: none;
+      }
+    }
+
+    & .rt {
+      position: absolute;
+      top: 6rem;
+      right: 0;
+
+      @include media('<=tablet') {
+        width: 7.5865rem;
+        height: 7.5865rem;
+        top: 1.22rem;
+        right: -1.56rem;
+      }
+    }
+
+    & .heading {
+      @include flexed(unset, center, column);
+      max-width: 37.5rem;
+      row-gap: 0.94rem;
+
+      @include media('<=tablet') {
+        row-gap: 0.75rem;
+      }
+
+      & h2 {
+        color: $darkGreen;
+        font-family: var(--font-made-mirage);
+        font-size: 3.75rem;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 130%;
+        text-align: center;
+
+        @include media('<=tablet') {
+          font-size: 3rem;
+          max-width: 90%;
+        }
+      }
+
+      & p {
+        color: $darkGreen;
+        text-align: center;
+        font-family: var(--font-gilroy);
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+
+        @include media('<=tablet') {
+          font-size: 1rem;
+          max-width: 95%;
+        }
+      }
+    }
+
+    & .form {
+      @include flexed(unset, center, column);
+      width: 100%;
+      max-width: 37.5rem;
+
+      & .inputField {
+        width: 100%;
+        @include flexed(unset, flex-start, column);
+        column-gap: 1.25rem;
+        gap: 0.38rem;
+
+        &:nth-of-type(1) {
+          margin-bottom: 1.12rem;
+
+          @include media('<=tablet') {
+            margin-bottom: 1.5rem;
+          }
+        }
+
+        &:nth-of-type(2) {
+          margin-bottom: 1.88rem;
+
+          @include media('<=tablet') {
+            margin-bottom: 2.5rem;
+          }
+        }
+
+        & label {
+          color: $darkGrey;
+          font-family: var(--font-gilroy);
+          font-size: 1.125rem;
+          font-weight: 500;
+          line-height: normal;
+
+          @include media('<=tablet') {
+            font-size: 1.25rem;
+          }
+        }
+
+        & input {
+          width: 100%;
+          height: 3.75rem;
+          padding: 0rem 1.88rem;
+          gap: 0.46rem;
+          border-radius: 3.75rem;
+          outline: none;
+          border: none;
+
+          @include media('<=tablet') {
+            height: 4rem;
+            border-radius: 2.5rem;
+          }
+        }
+
+        & textarea {
+          @extend input;
+          padding: 1.88rem;
+          border-radius: 1.5rem;
+          height: 12.5rem;
+          resize: none;
+
+          @include media('<=tablet') {
+            border-radius: 1.25rem;
+          }
+        }
+      }
+    }
+  }
+}

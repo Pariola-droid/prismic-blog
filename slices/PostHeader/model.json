@@ -1,0 +1,68 @@
+{
+  "id": "post_header",
+  "type": "SharedSlice",
+  "name": "PostHeader",
+  "description": "PostHeader",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "publish_date": {
+          "type": "Date",
+          "config": {
+            "label": "Publish Date",
+            "placeholder": ""
+          }
+        },
+        "post_title": {
+          "type": "Text",
+          "config": {
+            "label": "Post Title",
+            "placeholder": "Enter your post title"
+          }
+        },
+        "excerpt": {
+          "type": "Text",
+          "config": {
+            "label": "Excerpt",
+            "placeholder": ""
+          }
+        },
+        "author": {
+          "type": "Link",
+          "config": {
+            "label": "Author",
+            "select": "document",
+            "customtypes": [
+              "author"
+            ]
+          }
+        },
+        "reviewer": {
+          "type": "Link",
+          "config": {
+            "label": "Reviewer",
+            "select": "document",
+            "customtypes": [
+              "reviewer"
+            ]
+          }
+        },
+        "thumbnail": {
+          "type": "Image",
+          "config": {
+            "label": "Thumbnail",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

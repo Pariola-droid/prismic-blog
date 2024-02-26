@@ -1,0 +1,232 @@
+@import '../../../styles/core/variables.scss';
+@import '../../../styles/core/typography.scss';
+@import '../../../styles/utils/mixins.scss';
+@import '../../../styles/utils/breakpoints.scss';
+
+.keepWeight {
+  padding: 5.6rem 0;
+  width: 100%;
+  @include grid();
+  background-color: $secondaryLightBlue;
+
+  @include media('<=tablet') {
+    padding: 5rem 0;
+  }
+
+  & .wrap {
+    width: 100%;
+    max-width: $layout-breakpoint-medium;
+    @include flexed(space-between, flex-start, row);
+    position: relative;
+
+    @include media('<=tablet') {
+      @include flexed(unset, flex-start, column);
+      row-gap: 2rem;
+      max-width: 100%;
+    }
+
+    & .leftContent {
+      width: 100%;
+      max-width: 37.5rem;
+      @include flexed(unset, flex-start, column);
+
+      @include media('<=tablet') {
+        max-width: 100%;
+      }
+
+      & h2 {
+        color: $darkGreen;
+        font-family: var(--font-made-mirage);
+        font-size: 3.75rem;
+        font-weight: 900;
+        line-height: 130%;
+        max-width: 90%;
+        margin-bottom: 2.25rem;
+
+        @include media('<=tablet') {
+          font-size: 2.5rem;
+          margin-bottom: 1.25rem;
+        }
+      }
+
+      & p {
+        color: $darkGreen;
+        font-family: var(--font-gilroy);
+        font-size: 1.3rem;
+        font-weight: 500;
+        line-height: 150%;
+        max-width: 30rem;
+
+        @include media('<=tablet') {
+          font-size: 1.125rem;
+        }
+      }
+    }
+
+    & .rightContent {
+      width: 100%;
+      max-width: 41.3rem;
+      @include flexed(unset, flex-start, column);
+      row-gap: 1.12rem;
+
+      @include media('<=phone') {
+        max-width: 100%;
+        row-gap: 1rem;
+      }
+
+      & .faq {
+        width: 100%;
+        @include flexed(unset, flex-start, column);
+        gap: 2rem;
+        // max-height: 7rem;
+        max-height: 5.5rem;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+        overflow: hidden;
+        -webkit-tap-highlight-color: transparent;
+
+        @include media('<=tablet') {
+          max-height: 5rem;
+        }
+
+        @include media('<=phone') {
+          &.md {
+            max-height: 3.5rem;
+          }
+        }
+
+        &.open {
+          max-height: 25rem !important;
+          gap: 1.12rem;
+
+          @include media('<=tablet') {
+            gap: 1rem;
+          }
+
+          & .question {
+            background-color: $darkBlue;
+            max-height: 7rem;
+
+            & .starIcon {
+              color: $white;
+            }
+
+            & .plusIcon {
+              transform: rotate(-45deg);
+              color: $white;
+            }
+
+            h4 {
+              color: $white;
+              white-space: unset;
+              overflow: unset;
+              text-overflow: unset;
+            }
+          }
+
+          & .answer {
+            transform: scaleY(1);
+          }
+        }
+
+        & .question {
+          width: 100%;
+          max-height: 5.5rem;
+          border-radius: 1.5rem;
+          background-color: $white;
+          padding: 1.8rem 1.88rem;
+          transition: all 0.3s ease-in-out;
+          position: relative;
+          @include flexed(flex-start, center, row);
+          cursor: pointer;
+
+          @include media('<=tablet') {
+            padding: 1.5rem 1rem;
+            border-radius: 1rem;
+          }
+
+          @include media('<=phone') {
+            padding: 1rem;
+          }
+
+          &Wrap {
+            width: 100%;
+            @include flexed(flex-start, center, row);
+            gap: 1.12rem;
+
+            @include media('<=tablet') {
+              gap: 0.75rem;
+            }
+
+            & .starIcon {
+              color: $lightGreen;
+              max-width: 1.88rem;
+              max-height: 1.88rem;
+
+              @include media('<=tablet') {
+                max-width: 1rem;
+                max-height: 1rem;
+              }
+            }
+
+            & h4 {
+              color: $darkGreen;
+              font-family: var(--font-made-mirage);
+              font-size: 1.5rem;
+              font-style: normal;
+              font-weight: 700;
+              line-height: normal;
+              max-width: 85%;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              transition: all 0.3s ease-in-out;
+
+              @include media('<=tablet') {
+                max-width: 90%;
+                white-space: normal;
+                font-size: 1rem;
+              }
+            }
+          }
+
+          & .plusIcon {
+            position: absolute;
+            right: 1.88rem;
+            transition: all 0.3s ease-in-out;
+            color: $lightGreen;
+            max-width: 1.5rem;
+            max-height: 1.5rem;
+
+            @include media('<=tablet') {
+              max-width: 1.25rem;
+              max-height: 1.25rem;
+              right: 1rem;
+            }
+          }
+        }
+
+        & .answer {
+          width: 100%;
+          min-height: 6.6rem;
+          border-radius: 1.5rem;
+          background-color: #b0e0ef;
+          padding: 1.5rem;
+          //
+          color: $darkGreen;
+          font-family: var(--font-gilroy);
+          font-size: 1.12rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 160%;
+
+          @include media('<=tablet') {
+            font-size: 0.875rem;
+            border-radius: 2rem;
+            padding: 1rem 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}

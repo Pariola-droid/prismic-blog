@@ -1,0 +1,56 @@
+@import '../../../../styles/core/variables.scss';
+@import '../../../../styles/core/typography.scss';
+@import '../../../../styles/utils/mixins.scss';
+@import '../../../../styles/utils/breakpoints.scss';
+
+.floatingContainer {
+  height: 7rem;
+  position: absolute;
+  border-radius: 1.3rem;
+  bottom: 2.5rem;
+  right: -4rem;
+  @include flexed(flex-start, center, row);
+  padding: 1rem 1.5rem;
+  gap: 0.75rem;
+
+  @include media('<=tablet') {
+    bottom: 1.6rem;
+    padding: 0.64rem 0.96rem;
+    height: 4.5rem;
+    gap: 0.5rem;
+    right: -2.2rem;
+  }
+
+  & .icon {
+    width: 5rem;
+    height: 5rem;
+    background-color: $white;
+    @include grid();
+    border-radius: 100%;
+
+    @include media('<=tablet') {
+      max-width: 3.1rem;
+      max-height: 3.1rem;
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  & span {
+    color: $darkGreen;
+    font-family: var(--font-made-mirage);
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    @include media('<=tablet') {
+      font-size: 0.95rem;
+      white-space: nowrap;
+    }
+  }
+}

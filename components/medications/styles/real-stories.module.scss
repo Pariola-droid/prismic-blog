@@ -1,0 +1,342 @@
+@import '../../../styles/core/variables.scss';
+@import '../../../styles/core/typography.scss';
+@import '../../../styles/utils/mixins.scss';
+@import '../../../styles/utils/breakpoints.scss';
+
+.realStories {
+  width: 100%;
+  @include grid();
+  background-color: $secondaryLightBlue;
+  padding: 5.6rem 0;
+  overflow: hidden;
+  border-radius: 5.6rem;
+
+  @include media('<=tablet') {
+    padding: 5rem 0;
+    border-radius: unset;
+  }
+
+  & .wrap {
+    width: 100%;
+    max-width: $layout-breakpoint-medium;
+    @include flexed(unset, center, column);
+    row-gap: 3.75rem;
+    position: relative;
+
+    @include media('<=tablet') {
+      max-width: 100%;
+      row-gap: 3rem;
+    }
+
+    & .heading {
+      width: 100%;
+      @include grid();
+
+      & h2 {
+        position: relative;
+        color: $darkGreen;
+        font-family: var(--font-made-mirage);
+        font-size: 3.75rem;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 130%;
+        width: fit-content;
+
+        @include media('<=tablet') {
+          font-size: 2.5rem;
+          text-align: center;
+          max-width: 80%;
+        }
+
+        @include media('<=phone') {
+          max-width: 100%;
+        }
+      }
+    }
+
+    & .grided {
+      width: 100%;
+      height: fit-content;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3.75rem;
+
+      @include media('<=tablet') {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+      }
+
+      & .content {
+        padding: 3rem;
+        width: 100%;
+        border-radius: 1.88rem;
+        background: $white;
+        position: relative;
+        background-color: $darkGreen;
+        @include flexed(unset, flex-start, column);
+
+        @include media('<=tablet') {
+          padding: 1.5rem;
+          border-radius: 1.5rem;
+        }
+
+        @include media('<=tablet') {
+          &:nth-of-type(2) {
+            order: -4;
+          }
+        }
+
+        & .arrow {
+          position: absolute;
+          top: 7rem;
+
+          @include media('<=tablet') {
+            max-height: 2.5rem;
+            max-width: 2.5rem;
+            top: unset;
+            right: 1.5rem !important;
+            bottom: -1.5rem;
+            transform: rotate(90deg);
+          }
+
+          &.rightSide {
+            right: -1.5rem;
+
+            @include media('<=tablet') {
+              transform: rotate(90deg);
+            }
+          }
+
+          &.leftSide {
+            left: -1.5rem;
+            transform: scaleX(-1);
+
+            @include media('<=tablet') {
+              left: unset;
+              transform: scaleX(-1) rotate(90deg);
+            }
+          }
+        }
+
+        & h4 {
+          color: $white;
+          font-family: var(--font-made-mirage);
+          font-size: 2.25rem;
+          font-weight: 700;
+          line-height: 3rem;
+          margin-bottom: 3rem;
+
+          @include media('<=tablet') {
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+          }
+
+          & span {
+            color: $lightGreen;
+          }
+        }
+
+        & .desc {
+          @include flexed(space-between, center, row);
+          margin-bottom: 2.8rem;
+          width: 100%;
+
+          & .descItem {
+            width: max-content;
+            @include flexed(unset, flex-start, column);
+
+            & h5 {
+              color: $yellow;
+              font-family: var(--font-made-mirage);
+              font-size: 1.88rem;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 3rem;
+
+              @include media('<=tablet') {
+                font-size: 1.25rem;
+              }
+            }
+
+            & p {
+              color: $white;
+              font-size: 1.3125rem;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 160%;
+
+              @include media('<=tablet') {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+
+        & .name {
+          width: 100%;
+          gap: 1.12rem;
+          @include flexed(flex-start, center, row);
+
+          & svg {
+            @include media('<=tablet') {
+              max-height: 1.5rem;
+              max-width: 1.5rem;
+            }
+          }
+
+          & small {
+            color: $white;
+            font-family: var(--font-gilroy);
+            font-size: 1.5rem;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: 0.09rem;
+            text-transform: uppercase;
+
+            @include media('<=tablet') {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+      & .vid {
+        min-height: 30rem;
+        width: 100%;
+        border-radius: 3rem;
+        position: relative;
+        border: 3px solid $darkBlue;
+        overflow: hidden;
+
+        @include media('<=tablet') {
+          min-height: 15rem;
+          border-radius: 1.75rem;
+          border: 3px solid $darkBlue;
+        }
+
+        & .videoOverlay {
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: rgba(0, 0, 0, 0.5);
+          @include flexed(center, center, column);
+          cursor: pointer !important;
+          z-index: 9;
+
+          & .play {
+            top: 3rem;
+            right: 3rem;
+            cursor: pointer;
+            width: 5.6rem;
+            height: 5.6rem;
+            position: absolute;
+
+            @include media('<=tablet') {
+              width: 2.5rem;
+              height: 2.5rem;
+              top: 1.25rem;
+              right: 1.5rem;
+            }
+          }
+
+          & .thumbnail {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+
+          & .tag {
+            position: absolute;
+            border-radius: 3.8rem;
+            background: rgba(4, 61, 59, 0.6);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            left: 1.88rem;
+            bottom: 1.88rem;
+            padding: 0.75rem;
+            width: max-content;
+
+            @include media('<=tablet') {
+              border-radius: 5rem;
+              left: 1.25rem;
+              bottom: 1.25rem;
+              padding: 0.25rem;
+            }
+
+            &Wrap {
+              width: max-content;
+              padding: 0.56rem 1.13rem;
+              @include flexed(flex-start, center, row);
+              gap: 0.75rem;
+              color: currentColor;
+
+              @include media('<=tablet') {
+                gap: 0.5rem;
+                padding: 0.5rem 1rem;
+
+                & svg {
+                  width: 1.44rem;
+                  height: 1.25rem;
+                }
+              }
+
+              & small {
+                font-family: var(--font-gilroy);
+                color: currentColor;
+                font-size: 1.5rem;
+                font-weight: 600;
+                line-height: normal;
+
+                @include media('<=tablet') {
+                  font-size: 1rem;
+                }
+              }
+            }
+          }
+        }
+
+        & .ytVid {
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          cursor: pointer !important;
+        }
+
+        & iframe {
+          width: 100%;
+          height: 100%;
+          cursor: pointer !important;
+        }
+
+        &:nth-of-type(1) {
+          & .tag {
+            &Wrap {
+              border-radius: 1.88rem;
+              background: $lightMud;
+              color: $mud;
+            }
+          }
+        }
+
+        &:nth-of-type(4) {
+          & .tag {
+            &Wrap {
+              border-radius: 1.88rem;
+              background: $lightPurple;
+              color: $purple;
+            }
+          }
+        }
+      }
+    }
+
+    & .bottom {
+      width: 100%;
+      @include grid();
+    }
+  }
+}

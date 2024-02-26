@@ -1,0 +1,301 @@
+@import '../../../styles/core/variables.scss';
+@import '../../../styles/core/typography.scss';
+@import '../../../styles/utils/mixins.scss';
+@import '../../../styles/utils/breakpoints.scss';
+
+.success {
+  width: 100%;
+  @include grid();
+  background-color: $lightPurple;
+  padding: 5.6rem 0;
+  overflow: hidden;
+
+  @include media('<=tablet') {
+    padding: 5rem 0;
+  }
+
+  & .wrap {
+    width: 100%;
+    max-width: $layout-breakpoint-medium;
+    @include flexed(unset, center, column);
+    row-gap: 3.75rem;
+    position: relative;
+
+    @include media('<=tablet') {
+      row-gap: 3rem;
+      max-width: 100%;
+    }
+
+    & .heading {
+      width: 100%;
+      @include grid();
+
+      & h2 {
+        position: relative;
+        color: $darkGreen;
+        font-family: var(--font-made-mirage);
+        font-size: 3.75rem;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 130%;
+
+        @include media('<=tablet') {
+          font-size: 2.5rem;
+          text-align: center;
+        }
+
+        & .crown {
+          position: absolute;
+          top: -35px;
+          right: -55px;
+
+          @include media('<=tablet') {
+            display: none;
+          }
+        }
+      }
+    }
+
+    & .slider {
+      width: 100%;
+      height: fit-content;
+      @include grid();
+
+      &_column {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3.75rem;
+
+        @include media('<=tablet') {
+          grid-template-columns: 1fr;
+          row-gap: 3rem;
+        }
+      }
+
+      .content {
+        padding: 3rem;
+        width: 100%;
+        border-radius: 1.88rem;
+        background: $white;
+        position: relative;
+        background-color: $darkGreen;
+        @include flexed(unset, flex-start, column);
+
+        @include media('<=tablet') {
+          padding: 1.5rem;
+          border-radius: 1.75rem;
+        }
+
+        &_arrow {
+          position: absolute;
+          top: 7rem;
+          right: -1.5rem;
+
+          @include media('<=tablet') {
+            top: unset;
+            bottom: -1.5rem;
+            right: 1.5rem;
+            transform: rotate(90deg);
+          }
+        }
+
+        & h4 {
+          color: $white;
+          font-family: var(--font-made-mirage);
+          font-size: 2.25rem;
+          font-weight: 700;
+          line-height: 3rem;
+          margin-bottom: 1.12rem;
+
+          @include media('<=tablet') {
+            font-size: 1.5rem;
+            line-height: normal;
+            margin-bottom: 1rem;
+          }
+
+          & span {
+            color: $lightGreen;
+          }
+        }
+
+        & p {
+          color: $white;
+          font-size: 1.12rem;
+          font-weight: 400;
+          line-height: 160%;
+          margin-bottom: 3rem;
+
+          @include media('<=tablet') {
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+          }
+        }
+
+        & .name {
+          width: 100%;
+          gap: 1.12rem;
+          @include flexed(flex-start, center, row);
+
+          @include media('<=tablet') {
+            row-gap: 0.5rem;
+
+            & img {
+              max-width: 1.5rem;
+              max-height: 1.5rem;
+            }
+          }
+
+          & small {
+            color: $white;
+            font-family: var(--font-gilroy);
+            font-size: 1.5rem;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: 0.09rem;
+            text-transform: uppercase;
+
+            @include media('<=tablet') {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+      & .vid {
+        height: 30rem;
+        width: 100%;
+        position: relative;
+        border-radius: 3rem;
+        position: relative;
+        border: 3px solid $purple;
+        overflow: hidden;
+
+        &::before {
+          content: 'Loading...';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: grid;
+          place-items: center;
+        }
+
+        @include media('<=tablet') {
+          height: 15rem;
+          border-radius: 1.75rem;
+        }
+
+        & .videoOverlay {
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: rgba(0, 0, 0, 0.5);
+          @include flexed(center, center, column);
+          cursor: pointer !important;
+          z-index: 9;
+
+          & svg {
+            position: absolute;
+            top: 3rem;
+            right: 3rem;
+            cursor: pointer;
+            width: 5.6rem;
+            height: 5.6rem;
+
+            @include media('<=tablet') {
+              top: 1.25rem;
+              right: 1.5rem;
+              height: 2.5rem;
+              width: 2.5rem;
+            }
+          }
+
+          & .thumbnail {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+
+        & .ytVid {
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          cursor: pointer !important;
+        }
+
+        & iframe {
+          width: 100%;
+          height: 100%;
+          cursor: pointer !important;
+        }
+      }
+    }
+
+    & .bottom {
+      width: 100%;
+      @include flexed(flex-end, center, row);
+      column-gap: 1.88rem;
+
+      @include media('<=tablet') {
+        @include flexed(flex-end, flex-end, column);
+        row-gap: 1.5rem;
+      }
+
+      & p {
+        color: $darkGreen;
+        text-align: right;
+        font-family: var(--font-gilroy);
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 0.09rem;
+        text-transform: uppercase;
+
+        @include media('<=tablet') {
+          font-size: 1.25rem;
+        }
+      }
+
+      & .controls {
+        width: max-content;
+        @include flexed(center, center, row);
+        gap: 1.125rem;
+
+        @include media('<=tablet') {
+          row-gap: 1.5rem;
+        }
+
+        & button {
+          width: 3.75rem;
+          height: 3.75rem;
+          background-color: $darkGreen;
+          @include grid();
+          border-radius: 100%;
+
+          &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+          }
+
+          @include media('<=tablet') {
+            width: 3.5rem;
+            height: 3.5rem;
+
+            & svg {
+              max-width: 1.87rem;
+              max-height: 1.87rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

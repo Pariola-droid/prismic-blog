@@ -1,0 +1,170 @@
+{
+  "format": "page",
+  "id": "blog_post",
+  "label": "Blog Post",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "Slug",
+          "placeholder": "URL slug for the page"
+        }
+      },
+      "locale": {
+        "type": "Select",
+        "config": {
+          "label": "Locale",
+          "placeholder": "Select what locale you want to publish a content to",
+          "options": ["en-US", "ng", "gh"],
+          "default_value": "en-US"
+        }
+      },
+      "publish_to": {
+        "type": "Group",
+        "config": {
+          "label": "Publish To",
+          "repeat": true,
+          "fields": {
+            "locale": {
+              "type": "Select",
+              "config": {
+                "label": "Locale",
+                "placeholder": "",
+                "options": ["en-US", "ng", "gh"],
+                "default_value": "en-US"
+              }
+            }
+          }
+        }
+      },
+      "publish_date": {
+        "type": "Date",
+        "config": {
+          "label": "Publish Date",
+          "placeholder": ""
+        }
+      },
+      "blog_category": {
+        "type": "Link",
+        "config": {
+          "label": "Blog Category",
+          "select": "document",
+          "customtypes": ["blog_categories"]
+        }
+      },
+      "author": {
+        "type": "Link",
+        "config": {
+          "label": "Author",
+          "select": "document",
+          "customtypes": ["author"]
+        }
+      },
+      "reviewer": {
+        "type": "Link",
+        "config": {
+          "label": "Reviewer",
+          "select": "document",
+          "customtypes": ["reviewer"]
+        }
+      },
+      "thumbnail": {
+        "type": "Image",
+        "config": {
+          "label": "Thumbnail",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "post_title": {
+        "type": "Text",
+        "config": {
+          "label": "Post Title",
+          "placeholder": ""
+        }
+      },
+      "post_excerpt": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Post Excerpt",
+          "placeholder": "",
+          "allowTargetBlank": false,
+          "multi": "paragraph,strong,em"
+        }
+      },
+      "sources": {
+        "type": "Group",
+        "config": {
+          "label": "Sources",
+          "repeat": true,
+          "fields": {
+            "source_title": {
+              "type": "Text",
+              "config": {
+                "label": "Source Title",
+                "placeholder": ""
+              }
+            },
+            "source_description": {
+              "type": "Text",
+              "config": {
+                "label": "Source Description",
+                "placeholder": ""
+              }
+            },
+            "source_link": {
+              "type": "Link",
+              "config": {
+                "label": "Source Link",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "select": null
+              }
+            }
+          }
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "rich_text": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        }
+      },
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        }
+      },
+      "meta_image": {
+        "type": "Image",
+        "config": {
+          "label": "Meta Image",
+          "constraint": {
+            "width": 2400,
+            "height": 1260
+          },
+          "thumbnails": []
+        }
+      }
+    }
+  }
+}

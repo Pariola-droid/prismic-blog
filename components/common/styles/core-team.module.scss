@@ -1,0 +1,274 @@
+@import '../../../styles/core/variables.scss';
+@import '../../../styles/core/typography.scss';
+@import '../../../styles/utils/mixins.scss';
+@import '../../../styles/utils/breakpoints.scss';
+
+.coreTeam {
+  width: 100%;
+  @include grid();
+  height: auto;
+  padding: 5.6rem 9.3rem;
+
+  &.px {
+    padding: 5.6rem 0;
+
+    @include media('<=tablet') {
+      padding: 5rem 0;
+    }
+  }
+
+  @include media('<=tablet') {
+    padding: 5rem 0;
+  }
+
+  & h2 {
+    color: $darkGreen;
+    font-family: var(--font-made-mirage);
+    font-size: 3.75rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 130%;
+    @include flexed(unset, center, row);
+    column-gap: 1.12rem;
+
+    @include media('<=tablet') {
+      font-size: 2.5rem;
+      flex-direction: column;
+      row-gap: 1rem;
+      text-align: center;
+    }
+
+    &.custom {
+      display: block;
+      text-align: center;
+      max-width: 51.75rem;
+
+      & span {
+        color: $lightGreen;
+      }
+    }
+  }
+
+  & .col {
+    width: 100%;
+    height: auto;
+    @include flexed(unset, center, column);
+
+    &.customize {
+      max-width: 25rem;
+
+      @include media('<=phone') {
+        max-width: unset;
+      }
+    }
+
+    & img {
+      width: 100%;
+      max-width: 18.75rem;
+      max-height: 18.75rem;
+
+      @include media('<=tablet') {
+        max-width: 22.88rem;
+        max-height: 22.88rem;
+      }
+    }
+
+    & .texts {
+      margin-top: 1.5rem;
+      @include flexed(unset, center, column);
+
+      @include media('<=tablet') {
+        margin-top: 2rem;
+      }
+
+      & h4 {
+        color: $darkGreen;
+        text-align: center;
+        font-family: var(--font-made-mirage);
+        font-size: 1.9rem;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 0.56rem;
+        text-transform: capitalize;
+
+        @include media('<=tablet') {
+          font-size: 2rem;
+        }
+      }
+
+      & small {
+        color: $lightGreen;
+        text-align: center;
+        font-family: var(--font-gilroy);
+        font-size: 1.12rem;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 0.18rem;
+        text-transform: uppercase;
+
+        @include media('<=tablet') {
+          font-size: 1.25rem;
+        }
+      }
+
+      & p {
+        margin-top: 0.84rem;
+        color: $darkGrey;
+        text-align: center;
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+        max-width: 18.7rem;
+
+        @include media('<=tablet') {
+          max-width: 22.88rem;
+          margin-top: 1rem;
+          font-size: 1rem;
+        }
+      }
+    }
+
+    & .link {
+      margin-top: 0.85rem;
+      width: max-content;
+      position: relative;
+
+      @include media('<=tablet') {
+        margin-top: 1rem;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1.5px;
+        background-color: $darkGrey;
+        bottom: 0;
+        left: 0;
+      }
+
+      & a {
+        @include flexed(center, center, row);
+        column-gap: 0.2rem;
+        color: $darkGrey;
+        text-align: center;
+        font-size: 1.125rem;
+        font-weight: 700;
+        line-height: normal;
+      }
+    }
+  }
+
+  & .wrap {
+    width: 100%;
+    max-width: $layout-breakpoint-medium;
+    @include flexed(unset, center, column);
+    row-gap: 3rem;
+
+    @include media('<=tablet') {
+      max-width: 90%;
+    }
+
+    & .grided {
+      width: 100%;
+      height: fit-content;
+      display: grid;
+      // grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+      gap: 7.5rem;
+
+      @include media('<=tablet') {
+        display: block;
+        gap: unset;
+      }
+    }
+
+    & .sliderContainerMobile {
+      width: 100vw;
+
+      & .sliderMobileNav {
+        margin-top: 3rem;
+      }
+    }
+  }
+
+  & .sliderContainer {
+    width: 100%;
+    @include flexed(unset, center, column);
+    row-gap: 4rem;
+
+    @include media('<=tablet') {
+      max-width: 90%;
+    }
+
+    & .slider {
+      width: 100%;
+      height: auto;
+      padding-left: 5%;
+      overflow: hidden;
+      z-index: 1;
+
+      @include media('>LGdesktop') {
+        max-width: $layout-breakpoint-medium;
+        padding-left: 0;
+      }
+
+      @include media('<=tablet') {
+        width: 100vw;
+      }
+
+      @include media('<=phone') {
+        padding-left: 0;
+      }
+
+      &Bottom {
+        width: 100%;
+        padding: 0 5%;
+        max-width: $layout-breakpoint-medium;
+        @include flexed(flex-end, center, row);
+
+        @include media('>desktop') {
+          padding: 0;
+        }
+
+        @include media('<=tablet') {
+          display: none;
+        }
+      }
+
+      &Controls {
+        width: max-content;
+        @include flexed(center, center, row);
+        gap: 2.5rem;
+
+        & button {
+          width: 5rem;
+          height: 5rem;
+          background-color: $darkGreen;
+          @include grid();
+          border-radius: 100%;
+
+          &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+          }
+
+          & svg {
+            width: 2.7rem;
+            height: 2.7rem;
+          }
+        }
+      }
+
+      &Nav {
+        display: none;
+        margin-top: 3rem;
+
+        @include media('<=tablet') {
+          @include grid();
+        }
+      }
+    }
+  }
+}
