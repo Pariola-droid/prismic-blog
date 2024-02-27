@@ -4,12 +4,14 @@ import { isFilled, asLink } from '@prismicio/client';
 import { components } from '@/slices';
 import { createClient } from '@/prismicio';
 import * as prismic from '@prismicio/client';
-
+//
 import PostHeader from '@/components/blog/PostHeader';
 import PostSource from '@/components/blog/PostSource';
 import RelatedArticles from '@/components/blog/RelatedArticles';
 import SubscribeSection from '@/components/common/blog/PreFooterSection';
 import PostContent from '@/components/blog/PostContent';
+//
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export default function BlogPost({ page, relatedArticles }) {
   return (
@@ -27,8 +29,11 @@ export default function BlogPost({ page, relatedArticles }) {
   );
 }
 
-export async function getStaticProps({ params, previewData }) {
+export async function getStaticProps({ params, locale, previewData }) {
   const client = createClient({ previewData });
+  const translations = await serverSideTranslations(locale || 'en-US', [
+    'common',
+  ]);
 
   const page = await client.getByUID('blog_post', params.uid, {
     fetchLinks: [
@@ -41,6 +46,7 @@ export async function getStaticProps({ params, previewData }) {
   });
 
   const relatedArticles = await client.getAllByType('blog_post', {
+    // filter by category - hmmm
     predicates: [prismic.filter.not('my.blog_post.uid', params.uid)],
     orderings: [
       { field: 'my.blog_post.publication_date', direction: 'desc' },
@@ -57,7 +63,12 @@ export async function getStaticProps({ params, previewData }) {
   });
 
   return {
-    props: { page, relatedArticles },
+    props: {
+      ...translations,
+      page,
+      relatedArticles,
+    },
+    revalidate: 60_000,
   };
 }
 

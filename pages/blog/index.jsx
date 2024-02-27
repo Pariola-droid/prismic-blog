@@ -8,7 +8,7 @@ import * as prismic from '@prismicio/client';
 import { isFilled, asLink } from '@prismicio/client';
 import { createClient } from '@/prismicio';
 //
-// import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export default function BlogPage({ posts, categories, author }) {
   console.log(posts, 'posts');
@@ -25,8 +25,11 @@ export default function BlogPage({ posts, categories, author }) {
   );
 }
 
-export async function getStaticProps({ previewData }) {
+export async function getStaticProps({ previewData, locale }) {
   const client = createClient({ previewData });
+  const translations = await serverSideTranslations(locale || 'en-US', [
+    'common',
+  ]);
 
   const posts = await client.getAllByType('blog_post', {
     orderings: [
@@ -48,6 +51,12 @@ export async function getStaticProps({ previewData }) {
   });
 
   return {
-    props: { posts, categories, author },
+    props: {
+      ...translations,
+      posts,
+      categories,
+      author,
+    },
+    revalidate: 60_000,
   };
 }

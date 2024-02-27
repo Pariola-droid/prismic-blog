@@ -24,7 +24,7 @@ export default function Layout({ children, title, description }) {
   });
 
   return (
-    <ReactLenis root ref={lenisRef} autoRaf={false}>
+    <Fragment>
       <MetaData
         customMeta={{
           title: title,
@@ -33,6 +33,6 @@ export default function Layout({ children, title, description }) {
       />
       <Navbar />
       <div className="layout">{children}</div>
-    </ReactLenis>
+    </Fragment>
   );
 }
